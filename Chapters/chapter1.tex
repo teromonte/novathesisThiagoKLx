@@ -13,23 +13,54 @@
 
 \prependtographicspath{{Chapters/Figures/Covers/}}
 
-
-The \gls{novathesis} template was born at the \gls{DI} of  \gls{FCT} of \gls{NOVA}, Portugal. This is a test with citing something~\cite{ecoop12-dias} in the appendix.
-
 \section{Context and Motivation}
+    
+The KLx employee and application management system, also known as AnA, serves as a pivotal instrument in automating Identity Governance and Administration (IGA) processes for over 5000 employees within the Credit Agricole Group. This on-premises software, developed and maintained by Netwrix, was procured by the CA Leasing and Factoring branch in 2018.
 
-The KLx employee and application management system is a crucial tool for automating Identity Governance and Administration (IGA) processes. However, like any software, it requires continuous improvement and extension to meet evolving needs. The motivation for this work stems from the recognition that code quality directly impacts the efficiency and effectiveness of the system. Furthermore, the system’s ability to integrate with other applications within the group is essential for providing a comprehensive IGA solution.
+From that point forward, the team at KLx, based in Lisbon, has been diligently working to maintain, configure, and enhance the application in accordance with the specifications and requests from the Functional team in France. This team, in turn, receives its directives from the human resources department, the ultimate customer of the application.
+
+However, the system’s complexity has escalated due to the swift integration of various company departments into the software and changes in the environment. This has made maintaining the system increasingly challenging. The impetus for this work originates from the understanding that the quality of the code and it's engineering process directly influences the system’s efficiency and effectiveness.
+
+In such scenarios, the theories and methods of Software Quality become crucial in software development. The goal is to identify the most critical points in the solution and development workflow that need improvement. By employing Software Quality methods, we aim to enhance the quality and, consequently, the productivity of the team.
 
 \section{Problem Definition}
 
-The primary problem this thesis addresses is twofold: improving the quality of the KLx system’s code and extending its capabilities to connect with other applications. Code quality will be enhanced by refactoring certain modules to eliminate code smells and improve readability and maintainability. The system’s capabilities will be extended by developing new features and integrations with other applications, as demanded by stakeholders. The implementation of version control with GIT and the automation of application deployment in various environments with GITLAB are also part of the problem definition.
+The incorporation of numerous departments within the organization, along with the escalating number of applications overseen by AnA, has led to a substantial surge in complexity and a corresponding decline in the delivery rate. This situation has been exacerbated by factors such as stringent deadlines and that the team received the configuration code in the middle of its development.
+
+More specifically, the source code, which currently comprises approximately 20,000 lines distributed across over 200 files, lacks any form of version control system. Instead, it has been managed solely through manual backups stored in shared directories. This approach has resulted in errors that could have been circumvented with the security and organization provided by a version control system.
+
+Alongside the lack of versioning, another issue that has been a bottleneck in the team’s delivery process is the way developments are delivered in different test and production environments. Currently, all team members share two virtual machines that are used to run an instance of AnA with the configuration being tested. This factor results in a significant amount of wasted time.
+
+Additionally, the source code exhibits several recurring issues related to code quality, particularly code duplication. Coupled with frequent business changes, each alteration must be replicated across various contexts. Consequently, this has introduced several inconsistencies into the codebase, which has grown in complexity over time.
+
+In summary, the challenges faced by our team—lack of version control, manual backups, and inefficient development processes—require urgent attention. Implementing effective solutions will not only enhance code quality but also streamline our delivery process. As we move forward, addressing these issues will be crucial for maintaining a robust and organized codebase.
 
 \section{Main Contributions}
 
-This thesis will contribute to the KLx system in several ways. Firstly, it will propose and implement optimizations in the codebase to improve its quality. Secondly, it will extend the system’s capabilities to connect with other applications, enhancing its functionality and utility. Thirdly, it will implement version control and automate deployment processes, thereby improving the efficiency of development and deployment cycles. Lastly, it will provide valuable feedback and lessons learned from the evaluation of these implementations, contributing to future improvements in the system.
+As a dedicated team member, I have taken on critical responsibilities within our project, all aimed at enhancing the overall quality, efficiency, and functionality of our software system.
+
+One of my primary tasks involves meticulously refactoring specific modules within our codebase. By identifying and addressing code smells, I achieve two key objectives:
+
+1. Code Readability: I enhance the clarity and comprehensibility of our code. Clear, well-structured code is easier to maintain and troubleshoot.
+2. Maintainability: Through thoughtful refactoring, I reduce redundancy and streamline our codebase. This not only improves the current state of the application but also ensures easier maintenance in the future.
+
+For example, I am currently restructuring the application profiles and permissions based on a new matrix. This effort significantly reduces code duplication across various classes and addresses software quality issues identified during code auditing. Ensuring accurate permissions is crucial for both security and functionality.
+
+Additionally, I am implementing version control using GIT. After evaluating evolving methodologies in software development, I chose the most suitable approach for our team. I have extensively documented this chosen method to ensure its effectiveness. This documentation serves as a valuable resource for our team members. I am actively educating our team on the new approach, facilitating its smooth implementation. So far, we have completed several phases, including code clean-up, repository creation, script variabilization, and training.
+
+Furthermore, I am automating the deployment process across various environments using GITLAB. I thoroughly assess the current deployment process to identify any shortcomings or bottlenecks. Exploring the feasibility of leveraging native development tools for seamless deployment, I aim to integrate deployment with our chosen versioning tool. This enhancement will elevate overall development quality.
+
+Collaborating closely with stakeholders, I am actively involved in developing new features and integrations. These enhancements span various technologies, including PowerShell, C, XML, JSON, and SQL. Notable upcoming integrations include integrating the L684 SAS Serveur application (manual + AD provisioning), the L716-SIMPLISSIMO application (manual provisioning).
+
 
 \section{Document Outline}
 
-Introduction
-State of the Art
-Work Plan
+This document is structured into three main parts: the introduction, the state of the art, and the work plan.
+
+The initial section provides essential background information on the topics under discussion and outlines their relevance. It sets the stage for the subsequent content by explaining the context and significance of the research. Within this introduction, we also define the problem that this thesis aims to address. Additionally, we highlight the innovations that our proposed product brings to the field.
+
+The state of the art is divided into several interconnected sections. The first part encompasses all relevant aspects except for the final one. Here, we delve into various definitions that are crucial for understanding the challenges inherent in our project. These definitions serve as building blocks for the subsequent discussions. Furthermore, we explore different approaches that have been proposed to tackle the identified problems. By examining existing solutions, we gain insights into the landscape of related research.
+
+In the second part of the state of the art, we focus on other projects that share similarities with our work. By analyzing these related endeavors, we can draw parallels, identify gaps, and position our research within the broader context. This comparative exploration enriches our understanding and informs our approach.
+
+The final section outlines our work plan. It includes a detailed Gantt chart that visualizes the timeline of tasks and milestones. Additionally, we provide a comprehensive description of our proposed solution, complemented by a sketch that illustrates key components.
