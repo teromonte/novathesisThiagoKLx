@@ -8,8 +8,8 @@
 
 \typeout{NT FILE chapter2.tex}%
 
-\chapter{State of the Art}
-\label{cha:State of the Art}
+\chapter{Background}
+\label{cha:Background}
 
 \prependtographicspath{{Chapters/Figures/Covers/}}
 
@@ -18,43 +18,56 @@ This chapter is divided into several sections. The first one gives an introducti
 \section{Identity Governance and Administration (IGA)}
 \label{sec:IGA}
 
-Identity Governance and Administration (IGA) plays a pivotal role in modern IT operations, enabling organizations to effectively manage user identities and access across the enterprise. It combines two critical components: Identity Governance and Identity Administration.
+Identity Governance and Administration (IGA) is a cornerstone of modern IT operations, providing a framework for organizations to manage user identities and access throughout the enterprise. This system is a blend of two vital components: Identity Governance and Identity Administration.
 
-    Identity Governance focuses on:
-        Visibility: Providing insights into user identities and access privileges.
-        Segregation of Duties: Ensuring that conflicting roles are separated to prevent misuse.
-        Role Management: Defining and assigning roles for efficient access control.
-        Attestation: Regularly reviewing and validating access rights.
-        Analytics and Reporting: Leveraging data for informed decision-making.
+Identity Governance is primarily concerned with visibility, offering valuable insights into user identities and their access privileges. It also emphasizes the segregation of duties, a crucial aspect that ensures roles with potential conflicts are separated to avoid misuse. This component also involves role management, which is the process of defining and assigning roles to streamline access control. Another key aspect of Identity Governance is attestation, which involves the regular review and validation of access rights. Lastly, it leverages analytics and reporting, utilizing data to make informed decisions.
 
-    Identity Administration encompasses:
-        Account Administration: Managing user accounts and their attributes.
-        Credentials Administration: Handling passwords, tokens, and other authentication factors.
-        User and Device Provisioning: Automating user access throughout their lifecycle.
-        Managing Entitlements: Controlling permissions and authorizations.
+On the other hand, Identity Administration is more focused on the management of user accounts and their attributes, a process known as account administration. It also handles credentials administration, which involves managing passwords, tokens, and other factors used for authentication. A significant part of Identity Administration is user and device provisioning, which automates user access throughout their lifecycle. Lastly, it manages entitlements, controlling permissions and authorizations.
+
+In essence, IGA is a comprehensive system that integrates various aspects of identity and access management, ensuring efficient and secure IT operations within an organization. It is a pivotal element in the modern IT landscape, enabling organizations to effectively manage and control user access across the enterprise.
 
 
-\subsection{Definition and Purpose}
+\subsection{Purpose}
 \label{sec:Template}
 
-Explain what IGA is: Identity Governance and Administration (IGA) is a set of policies and practices that enable organizations to manage and secure digital identities for users, applications, and data. Highlight its purpose: IGA helps balance the need to provide automated access to technology assets while managing security and compliance risks
+The primary purpose of Identity Governance and Administration (IGA) is to establish a robust and secure IT environment within an organization. It aims to effectively manage and control user identities and access, thereby reducing the risk of unauthorized access and potential security breaches.
+
+IGA serves as a proactive measure, ensuring that only authorized individuals have access to the necessary resources, thus maintaining the integrity and confidentiality of the organization’s data. By providing visibility into user identities and their access privileges, it allows organizations to detect and prevent potential misuse of access rights.
+
+Furthermore, IGA streamlines IT operations by automating various processes such as user and device provisioning, account administration, and managing entitlements. This not only enhances operational efficiency but also ensures compliance with regulatory requirements.
 
 \subsection{Components of IGA}
 \label{sec:Template}
 
-Identity Lifecycle Management: Covers user provisioning, deprovisioning, and modification of access rights throughout an individual’s lifecycle within an organization. Access Governance: Focuses on defining and enforcing policies related to access control, segregation of duties, and entitlement management. Access Administration: Involves managing user access requests, approvals, and access reviews. Role-Based Access Control (RBAC): Describes how roles are defined and assigned to users based on their job responsibilities. Policy Enforcement and Compliance: Ensures adherence to security policies, regulations (such as SOX, HIPAA, and GDPR), and audit requirements.
+The components of Identity Governance and Administration (IGA) encompass several key areas that work together to ensure secure and efficient IT operations within an organization.
+
+One of the primary components is Identity Lifecycle Management, which covers the provisioning, deprovisioning, and modification of access rights throughout an individual's lifecycle within an organization. This process ensures that users have the appropriate access rights at all times, from their onboarding to their eventual exit from the organization.
+
+Access Governance is another crucial component that focuses on defining and enforcing policies related to access control, segregation of duties, and entitlement management. It plays a vital role in preventing unauthorized access and potential security breaches.
+
+Access Administration involves managing user access requests, approvals, and access reviews. It ensures that only authorized individuals have access to the necessary resources, thereby maintaining the integrity and confidentiality of the organization's data.
+
+Role-Based Access Control (RBAC) is a method that defines and assigns roles to users based on their job responsibilities. It simplifies the process of managing user access by grouping users with similar job functions and assigning them the same access rights.
+
+Lastly, Policy Enforcement and Compliance ensures adherence to security policies and regulations such as the General Data Protection Regulation (GDPR), and audit requirements. This component ensures that the organization remains compliant with all relevant laws and regulations, thereby reducing the risk of penalties and reputational damage.
 
 \subsection{Challenges and Considerations}
 \label{sec:Template}
 
-Complexity: IGA implementations can be intricate due to diverse user populations, applications, and data sources. Integration: Integrating IGA with existing systems and applications can be challenging. Scalability: As organizations grow, scalability becomes crucial. User Experience: Balancing security with a positive user experience is essential.
+Implementing Identity Governance and Administration (IGA) comes with its own set of challenges and considerations. One of the primary challenges is the complexity of IGA implementations. Given the diverse user populations, applications, and data sources within an organization, implementing IGA can be a complex task.
+
+Another significant challenge is integration. Integrating IGA with existing systems and applications can be a daunting task, requiring careful planning and execution. It’s crucial to ensure that the IGA system works seamlessly with other systems to provide effective identity governance and administration.
+
+Scalability is another important consideration. As organizations grow and evolve, their IGA systems must be able to scale accordingly. This means that the IGA system should be capable of handling an increasing number of users, applications, and data sources without compromising performance or security.
+
+Lastly, user experience is a vital consideration. While it’s essential to maintain robust security measures, it’s equally important to ensure a positive user experience. This involves balancing the need for stringent security controls with the need for user-friendly interfaces and processes.
 
 \section{Netwrix Usercube}
 \label{sec:Template}
 
 Netwrix Usercube is a product that is now part of Netwrix. It is a comprehensive identity and access management solution. Netwrix Usercube enables organizations of all sizes to enhance their security and compliance posture by ensuring that access permissions are granted only to those who need them. It can automate onboarding and offboarding processes, easing the compliance burden.
 
-The application is better described dividing it in two modules that work together: Identity Management and Hab
+The application is better described dividing it in two modules that work together: Identity and Entitlement Management:
 
 \subsection{Identity Management}
 \label{sec:Template}
@@ -87,19 +100,29 @@ Now with the central repository as an intermediary, implementing a new system re
 \subsection{Entitlement Management}
 \label{sec:Template}
 
-Managing identities' entitlements requires managing entitlements and assigning them to identities. This page is about the role model.
+The process of managing identities’ entitlements is a complex task that necessitates the meticulous assignment of entitlements to identities. This task is particularly important in the context of a role model, which is a subset of a policy that includes governance data such as risk definition. The role model is designed to manage entitlements across all managed systems and establish rules that initiate the assignment of these entitlements to identities.
 
-Role Model Overview
-A managed system's entitlements can have many forms. They authorize identities to access certain data on a given system, or a physical location.
+Entitlements in a managed system can take on various forms. They serve as permissions for identities to access specific data on a system or a physical location. For instance, in the Active Directory, entitlements are typically group memberships. To have administrator rights in the Iris application, a user must be a member of the group SGAPPIT/Development/Iris/Administrator.
 
-For example, entitlements in the Active Directory are usually group memberships. For example, to have administrator rights in the Iris application, a user must be part of the members of the group SGAPPIT/Development/Iris/Administrator.
+Usercube is a tool specifically designed to help create a comprehensive and reliable catalog of the entitlements available in the managed systems. It ensures that the appropriate entitlements are assigned to the correct users. The role model in Usercube encompasses the entitlements, represented as roles, for all managed systems. It also includes rules that manage the systems’ resources and initiate the assignment of entitlements to identities.
 
-Usercube is designed to help establish an exhaustive and reliable catalog of the entitlements available in the managed systems, and assign the right entitlements to the right users.
+The role model is part of a broader policy that also includes governance data such as risk definition. This allows for the implementation of distinct behaviors through distinct policies at a higher level.
 
-Thus, the role model contains:
+Usercube represents IGA-related access right mechanisms through a role-based model. The role catalog aims to contain a comprehensive list of entitlements from all managed systems. Each entitlement is modeled by a role, and NETWRIX recommends creating a single role for each entitlement with a name that is more functional than technical for easy understanding.
 
-the entitlements, as roles, for all managed systems;
-the rules that trigger the assignment of entitlements to identities, and more broadly manage the systems' resources. Some of them act as link between Usercube's roles and the systems' accounts and permissions. Some of them are linked to, and thus apply only to, specific resource types.
+Roles alone are not sufficient to provide identities with the systems’ technical entitlements. Rules are needed for Usercube to write users’ entitlements in the managed systems. These rules are used to automatically assign roles to users and categorize users and accounts.
+
+Provisioning rules are a specific type of rule in Usercube. They write the actual entitlements to the managed systems, often based on users’ roles. For example, to give an AD entitlement to a user, a rule is needed that adds the user to the member list of a specific AD group when a specific role is assigned to them. Even when a role is manually assigned, provisioning rules determine which account and permission groups are given as entitlements.
+
+While the role catalog and provisioning rules are together enough to manually give users their access rights, we often want Usercube to do this automatically. Assignment rules automatically assign roles to identities based on specific criteria. For example, we can choose to assign the role Benefits Manager - FR to any user whose job title is benefits manager and whose location is in France.
+
+Once all assignment rules are created, Usercube is able to spot existing assignments that are not supported by any rule, marking them as non-conforming.
+
+Usercube’s assignment rules include single role rules and composite role rules to assign single and composite roles, and resource type rules to assign accounts.
+
+Different resources can be managed through different rules, by being part of different resource types. A resource type is a group of resources that have the same IGA-related purposes. Categorization rules categorize resources into resource types and link identities to the accounts they own.
+
+For example, we might need to differentiate AD’s standard accounts from administration accounts. This way, we can configure different email addresses for privileged accounts, for example adm.john.smith@contoso.com. We can also add more approval steps in the workflows related to privileged accounts, for more security than for standard accounts.
 
 \begin{figure}[htbp]
   \centering
@@ -108,51 +131,7 @@ the rules that trigger the assignment of entitlements to identities, and more br
   \label{fig:configurationCycle}
 \end{figure}
 
-The role model is a subset of a policy that also includes governance data such as risk definition. So, at a higher level, distinct policies can be used to implement distinct behaviors.
 
-A Role Catalog
-Usercube intends to represent IGA-related access right mechanisms by a role-based model. The goal of the role catalog is contain an exhaustive list of entitlements from all managed systems.
-
-Entitlements from the managed systems are modeled by roles. For each entitlement, NETWRIX advises creating a single role, with an easily understandable name, more functional than technical, so that everyone knows what the role is for.
-
-Each individual entitlement should usually be modeled by a single role, and single roles can be grouped together into composite roles to be closer to real job positions.
-
-A Rule Set
-Roles alone are not enough to give identities the systems' technical entitlements. We need rules to have Usercube write users' entitlements in the managed systems. Rules are further used to automatically assign roles to users, or to categorize users and accounts, etc.
-
-Provisioning rules
-Just like identities, accounts are represented in Usercube by an entity-relationship model. So Usercube manages entitlements as resources' attribute values.
-
-For example, giving specific Active Directory permissions to a new user means not only creating a new AD account, but also setting values for certain account properties like cn, sAMaccountName, userAccountControl or dn, etc.
-
-Provisioning rules write the actual entitlements to the managed systems, most often based on users' roles.
-
-For example, to give an AD entitlement to a user, we usually need to give them a group membership. Thus, we should have a rule that, when a user is assigned a specific role, adds the user to the member list of a specific AD group.
-
-Even when a role is manually assigned, provisioning rules will determine which account (and permission groups) are given as entitlements.
-
-Usercube's provisioning rules are:
-
-- scalar rules to compute simple string properties;
-- navigation rules and query rules to compute properties that act as foreign keys in a database;
-- resource type rules to automatically create resources.
-
-Assignment rules
-While the role catalog and provisioning rules are together enough to manually give users their access rights, we often want Usercube to do this automatically. Assignment rules automatically assign roles to identities based on specific criteria.
-
-For example, we can choose to assign the role Benefits Manager - FR to any user whose job title is benefits manager and whose location is in France.
-
-Once all assignment rules are created, Usercube is able to spot existing assignments that are not supported by any rule, marking them as non-conforming. See more details on governance.
-
-Usercube's assignment rules are:
-
-- single role rules and composite role rules to assign single and composite roles;
-- resource type rules to assign accounts.
-
-Categorization rules
-Different resources can be managed through different rules, by being part of different resource types. So a resource type is a group a resources that have the same IGA-related purposes. Categorization rules categorize resources into resource types and link identities to the accounts they own.
-
-For example, we might need to differentiate AD's standard accounts from administration accounts. This way, we can configure different email addresses for privileged accounts, for example adm.john.smith@contoso.com. We can also add more approval steps in the workflows related to privileged accounts, for more security than for standard accounts.
 
 \subsection{Architecture}
 \label{sec:Template}
@@ -211,7 +190,3 @@ The Lehman Laws of S/w evolution and S/w development process models address diff
 
 \cite{fowler2018refactoring}
 Martin Fowler [Fow99]: "a disciplined technique for restructuring an existing body of code, altering its internal structure without changing its external behaviour." William Wake [Wak04]: "Refactoring is the art of improving the design of existing code. Refactoring provides us with ways to recognize problematic code and gives us recipes for improving it."
-
-
-\section{Related Work}
-\label{sec:Template}
