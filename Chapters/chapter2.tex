@@ -13,7 +13,42 @@
 
 \prependtographicspath{{Chapters/Figures/Covers/}}
 
-This chapter is divided into several sections. The first one gives an introduction to
+This chapter is divided into several sections. The first one gives an introduction to...
+
+
+\section{Software Quality}
+\cite{MetricsMaintainability1994}
+\cite{ManagingMaintenance1983}
+\cite{lientz1980software}
+\cite{MaintenanceGlass1998}
+    
+\subsection{Definition and Importance}
+
+
+
+\subsection{Metrics and Evaluation}
+
+
+
+\section{Lehman’s Laws of Software Evolution}
+
+\cite{LehmanLaws1980}
+\cite{Lehman1978ProgramsCS}
+\cite{Lehman1996Laws}
+\cite{SoftwareEvolution2010}
+
+\subsection{Overview of Lehman’s Laws}
+
+
+
+\subsection{Relevance to Banking Systems}
+
+
+
+
+
+
+
 
 \section{Identity Governance and Administration (IGA)}
 \label{sec:IGA}
@@ -28,7 +63,7 @@ In essence, IGA is a comprehensive system that integrates various aspects of ide
 
 
 \subsection{Purpose}
-\label{sec:Template}
+
 
 The primary purpose of Identity Governance and Administration (IGA) is to establish a robust and secure IT environment within an organization. It aims to effectively manage and control user identities and access, thereby reducing the risk of unauthorized access and potential security breaches.
 
@@ -37,7 +72,7 @@ IGA serves as a proactive measure, ensuring that only authorized individuals hav
 Furthermore, IGA streamlines IT operations by automating various processes such as user and device provisioning, account administration, and managing entitlements. This not only enhances operational efficiency but also ensures compliance with regulatory requirements.
 
 \subsection{Components of IGA}
-\label{sec:Template}
+
 
 The components of Identity Governance and Administration (IGA) encompass several key areas that work together to ensure secure and efficient IT operations within an organization.
 
@@ -52,7 +87,7 @@ Role-Based Access Control (RBAC) is a method that defines and assigns roles to u
 Lastly, Policy Enforcement and Compliance ensures adherence to security policies and regulations such as the General Data Protection Regulation (GDPR), and audit requirements. This component ensures that the organization remains compliant with all relevant laws and regulations, thereby reducing the risk of penalties and reputational damage.
 
 \subsection{Challenges and Considerations}
-\label{sec:Template}
+
 
 Implementing Identity Governance and Administration (IGA) comes with its own set of challenges and considerations. One of the primary challenges is the complexity of IGA implementations. Given the diverse user populations, applications, and data sources within an organization, implementing IGA can be a complex task.
 
@@ -62,15 +97,32 @@ Scalability is another important consideration. As organizations grow and evolve
 
 Lastly, user experience is a vital consideration. While it’s essential to maintain robust security measures, it’s equally important to ensure a positive user experience. This involves balancing the need for stringent security controls with the need for user-friendly interfaces and processes.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \section{Netwrix Usercube}
-\label{sec:Template}
+
+
+How is usercube configuration code related to object oriented code?
 
 Netwrix Usercube is a product that is now part of Netwrix. It is a comprehensive identity and access management solution. Netwrix Usercube enables organizations of all sizes to enhance their security and compliance posture by ensuring that access permissions are granted only to those who need them. It can automate onboarding and offboarding processes, easing the compliance burden.
 
 The application is better described dividing it in two modules that work together: Identity and Entitlement Management:
 
 \subsection{Identity Management}
-\label{sec:Template}
+
 
 A company involves many sorts of identities: obviously employees, but also external workers like contractors who are usually not tracked in the company's systems except for billing purposes, bots, softwares, etc. All identity types that need to be assigned entitlements to work within the company must be represented.
 
@@ -98,7 +150,7 @@ Now with the central repository as an intermediary, implementing a new system re
 
 
 \subsection{Entitlement Management}
-\label{sec:Template}
+
 
 The process of managing identities’ entitlements is a complex task that necessitates the meticulous assignment of entitlements to identities. This task is particularly important in the context of a role model, which is a subset of a policy that includes governance data such as risk definition. The role model is designed to manage entitlements across all managed systems and establish rules that initiate the assignment of these entitlements to identities.
 
@@ -128,13 +180,13 @@ For example, we might need to differentiate AD’s standard accounts from admini
   \centering
   \includegraphics[width=5in]{Entitlements_RoleModel}
   \caption{Entitlements Role Model}
-  \label{fig:configurationCycle}
+  \label{fig:Entitlements_RoleModel}
 \end{figure}
 
 
 
 \subsection{Architecture}
-\label{sec:Template}
+
 
 Usercube works via a server which operates computation, stores all application data in the database, and serves a web User Interface; at least one agent which operates data flows to/from the managed systems. The managed systems' credentials are used only by the agent and are never disclosed to the server. The agent can call the server, but the server cannot call the agent. The data flows' initiatives are always from the agent. In our case the installation is on-premises so that the server is installed on an isolated network within the company.
 
@@ -146,7 +198,7 @@ Usercube works via a server which operates computation, stores all application d
 \end{figure}
 
 \subsection{Configuration}
-\label{sec:Template}
+
 
 A Usercube configuration is a set of XML files edited according the Usercube schema. The recommendations part of this section explains how to set up an editing environment for the configuration. Regardless of the editing space, the configuration persists in the Usercube database. It's this stored configuration that is used at runtime. The Deploy configuration tool is used to import a new version of the configuration (from the XML files set). The Export configuration tool can be used to export the current configuration (to a XML files set). The Usercube project's integration cycle consists in developing a configuration by successive imports in a test instance.
 
@@ -160,33 +212,16 @@ The XML configuration schema shows some similarities with the database schema bu
 \end{figure}
 
 \subsection{Testing}
-\label{sec:Template}
+
 
 for testing we have different enviroments running in virtual machines. we deploy the new configuration to a testing instance and check if there is initial erros. Then the functional team is the one responsible to test the developments. After the test is done they send us back the ticket and then we save our code to build the next mep
 
 \subsection{Deployment}
-\label{sec:Template}
+
 
 Deploy a local XML configuration by using the Deploy-Configuration executable and declaring at least: the configuration directory; the connection string of the database.
 
-\section{Software Quality}
-\label{sec:Template}
 
-\subsection{Reverse Engineering}
-\label{sec:Development models}
 
-Reverse Engineering Involves analysing a subject system to determine its components and relationship between them Involves creation of alternative representations of the system, usually at a higher level of abstraction Does not involve changing or replicating system Only concerned with an examination of the system Can occur at any stage in s/w develop. life cycle
 
-\subsection{Development models}
-\label{sec:Development models}
 
-\subsection{Lehman’s laws of software evolution}
-\label{sec:Lehman}
-
-The Lehman Laws of S/w evolution and S/w development process models address different aspects of the software development life cycle. However, they are related in the sense that both provide insights into the challenges and dynamics of software development over time S/w development process models define ways in which S/w projects are planned, executed, and controlled The Lehman Laws: Describe the evolution of S/w Suggest that S/w must continually evolve to remain useful.
-
-\subsection{Refactoring}
-\label{sec:Refactoring}
-
-\cite{fowler2018refactoring}
-Martin Fowler [Fow99]: "a disciplined technique for restructuring an existing body of code, altering its internal structure without changing its external behaviour." William Wake [Wak04]: "Refactoring is the art of improving the design of existing code. Refactoring provides us with ways to recognize problematic code and gives us recipes for improving it."

@@ -10,112 +10,75 @@
 
 \chapter{Related work}
 \label{cha:Related work}
-
+    
 \prependtographicspath{{Chapters/Figures/Covers/}}
 
-1. **Overview of Refactoring Research**: Start by providing a brief overview of the concept of refactoring and its significance in software development. You can cite the seminal paper by Opdyke [5] that introduced the term and its application in object-oriented software development.
 
-Example:
-"Refactoring is the process of changing a software system in such a way that it does not alter the external behavior of the code, yet improves its internal structure" [5].
 
-2. **Taxonomy of Refactoring Activities**: Discuss the different activities involved in the refactoring process, such as identifying where to apply refactorings, determining which refactorings to apply, and ensuring that the applied refactorings preserve behavior [1]. This can be supported by the paper by Mens and Tourwe [1], which provides a detailed overview of the refactoring process.
 
-Example:
-"The refactoring process consists of a number of distinct activities: identifying where the software should be refactored, determining which refactoring(s) should be applied to the identified places, guaranteeing that the applied refactoring preserves behavior, applying the refactoring, assessing the effect of the refactoring on quality characteristics of the software, and maintaining the consistency between the refactored program code and other software artifacts" [1].
+\section{Restructuring and Refactoring}
 
-3. **Formalisms and Techniques for Refactoring**: Discuss the various formalisms and techniques that can be used to support refactoring activities, such as the use of design patterns [11] or the implementation of refactoring tools . This can be supported by the paper by Kataoka et al. [13], which describes the Daikon tool for automatically detecting program invariants.
+"Refactoring is the art of improving the design of existing code. Refactoring provides us with ways to recognize problematic code and gives us recipes for improving it." \cite{wake2004refactoring} 
 
-Example:
-"Formalisms and techniques, such as design patterns [11], can be used to support refactoring activities by providing a structured approach to software development and maintenance" [13].
+\cite{RefactoringFowler2002} \cite{SurveyRefactoring2004} \cite{estructuringArnold1989}
 
-4. **Impact of Refactoring on Software Development Process**: Discuss the impact of refactoring on the software development process, including the potential benefits of improved maintainability, extensibility, and reusability [6]. This can be supported by the paper by Coleman et al. [1], which highlights the importance of maintainability in software development.
+    
+\subsection{Definition and Objectives}
 
-Example:
-"Refactoring can have a significant impact on the software development process by improving the maintainability, extensibility, and reusability of software systems" [6].
+\subsection{Impact}
 
-5. **Challenges and Open Issues in Refactoring**: Discuss the challenges and open issues in refactoring, such as the need for more formal foundations for software refactoring [4] or the need for more effective tools and techniques for refactoring . This can be supported by the paper by Mens and Tourwe [1], which highlights the need for more research in the field of software refactoring.
+\subsection{Techniques, Practices and Tools}
 
-Example:
-"Despite the significant progress made in the field of software refactoring, there are still many challenges and open issues that need to be addressed, such as the need for more formal foundations for software refactoring and the need for more effective tools and techniques for refactoring" [1].
+\subsection{Challenges and Best Practices}
 
-6. **Commercial Refactoring Tools**: Discuss the commercial refactoring tools that are available, such as Eclipse Refactoring  or Visual Studio Refactor . This can be supported by the paper by Tokuda and Batory , which describes the benefits of using commercial refactoring tools.
 
-Example:
-"Commercial refactoring tools, such as Eclipse Refactoring  or Visual Studio Refactor , can provide developers with a range of refactoring capabilities, including code reorganization, method extraction, and variable renaming" .
 
-7. **Future Directions in Refactoring Research**: Discuss the future directions in refactoring research, such as the need for more research on the impact of refactoring on software quality  or the need for more research on the use of artificial intelligence in refactoring . This can be supported by the paper by Mens and Tourwe [1], which highlights the need for more research in the field of software refactoring.
 
-Example:
-"Future directions in refactoring research include the need for more research on the impact of refactoring on software quality and the need for more research on the use of artificial intelligence in refactoring" [1].
 
-By incorporating these references, quotes, and ideas into your section on Related Work, you will be able to provide a comprehensive overview of the existing research in the field of refactoring and set the stage for your own research contributions.
 
-Citations:
-[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/17513252/624b4f51-b3a8-41a5-b15d-ec82b6e01b2f/TSE2004-surveyrefactoring.pdf
-[2] https://www.sonarsource.com/learn/refactoring/
-[3] https://www.linkedin.com/pulse/8-best-quotes-design-refactoring-ganesh-samarthyam
-[4] https://en.wikipedia.org/wiki/Code_refactoring
-[5] https://www.techtarget.com/searchapparchitecture/definition/refactoring
-[6] https://refactoring.com/catalog/
-[7] https://martinfowler.com/books/refactoring.html
-[8] https://www.altexsoft.com/blog/code-refactoring-best-practices-when-and-when-not-to-do-it/
-[9] https://www.geeksforgeeks.org/7-code-refactoring-techniques-in-software-engineering/
-[10] https://www.cloudzero.com/blog/refactoring-techniques/
-[11] https://arxiv.org/abs/2007.02194v1
-[12] https://refactoring.guru
-[13] https://softwareengineering.stackexchange.com/questions/98548/should-all-development-including-refactoring-work-be-accompanied-by-a-tracking
-[14] https://www.reddit.com/r/Unity3D/comments/17s0lnn/are_there_any_jobs_where_you_only_do_code/?rdt=57942
-[15] https://www.jetbrains.com/help/idea/refactoring-source-code.html
-[16] https://stackoverflow.com/questions/1025844/what-is-refactoring-and-what-is-only-modifying-code
-[17] https://refactoring.guru/refactoring
-[18] https://www.reddit.com/r/csharp/comments/17s0lid/are_there_any_jobs_where_you_only_do_code/
-[19] https://stackoverflow.com/questions/1870557/refactoring-a-working-project
 
-The most valuable academic references related to the topic of refactoring in software development are:
 
-1. **"A Survey of Refactoring" by T. Mens and T. Tourwe** [1]: This paper provides a comprehensive overview of the concept of refactoring, its significance in software development, and the various activities involved in the refactoring process.
 
-2. **"Formalising Behavior Preserving Program Transformations" by T. Mens, S. Demeyer, and D. Janssens** : This paper discusses the formal foundations for software refactoring, focusing on the preservation of software behavior during the refactoring process.
 
-3. **"Metrics Based Refactoring" by F. Simon, F. Steinbru¨ckner, and C. Lewerentz** [20]: This paper presents the use of object-oriented metrics to identify bad smells in software and propose adequate refactorings.
+\section{Reverse Engineering}
+\cite{ReverseEngineering2011} \cite{ReverseEngineering2005} \cite{ReverseEngineering1990}
 
-4. **"Understanding Software Evolution Using a Combination of Software Visualization and Software Metrics" by M. Lanza and S. Ducasse** : This paper highlights the importance of software visualization and metrics in identifying places in the code that are in need of refactoring.
 
-5. **"Evolving Object-Oriented Designs with Refactorings" by L. Tokuda and D.S. Batory** : This paper discusses the application of refactoring in object-oriented software development, focusing on the evolution of designs and the use of refactoring tools.
 
-6. **"Total Correctness by Local Improvement in the Transformation of Functional Programs" by D. Sands** : This paper presents a formal approach to transforming functional programs, ensuring that the transformations preserve the correctness of the original program.
 
-7. **"Correctness Preserving Program Refinements" by R.-J. Back** : This paper discusses the concept of correctness preserving program refinements, which is crucial in ensuring that the refactoring process does not alter the behavior of the software.
+\subsection{Concept and Purpose}
 
-8. **"Roots of Refactoring" by J. Philipps and B. Rumpe** : This paper provides a historical perspective on the concept of refactoring, tracing its roots back to the early days of software development.
 
-9. **"Finding Refactorings via Change Metrics" by S. Demeyer, S. Ducasse, and O. Nierstrasz** : This paper presents a method for identifying refactorings based on change metrics, which can be used to improve the maintainability and extensibility of software systems.
 
-10. **"Object-Oriented Development: The Fusion Method" by D. Coleman, P. Arnold, S. Bdoff, H. Gilchrist, F. Hayes, and P. Jeremaes** : This book provides a comprehensive overview of object-oriented development, including the use of refactoring in software development.
+\subsection{Applications in Software Maintenance}
 
-These references provide a solid foundation for understanding the concept of refactoring, its significance in software development, and the various techniques and formalisms used to support refactoring activities.
 
-Citations:
-[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/17513252/624b4f51-b3a8-41a5-b15d-ec82b6e01b2f/TSE2004-surveyrefactoring.pdf
-[2] https://xml.thinkonweb.com/journals/jips/media?key=journal%2Fjips%2FfullText%2F464%2F15.pdf
-[3] https://scholarworks.sjsu.edu/cgi/viewcontent.cgi?article=1172&context=etd_projects
-[4] http://www.ijbui.com/documents/%20IIR_IJBI_paper10.pdf
-[5] https://plg.uwaterloo.ca/~migod/846/papers/mensRefactoring-tse.pdf
-[6] https://www.irisa.fr/triskell/publis/2009/Moha09d.pdf
-[7] https://repositorio.iscte-iul.pt/bitstream/10071/26465/1/phd_jose_pereira_reis.pdf
-[8] https://www.reddit.com/r/haskell/comments/zwwmct/are_there_books_for_code_smell_refactoring_for/
-[9] https://www.researchgate.net/publication/228783302_Tool-supported_discovery_and_refactoring_of_structural_weaknesses_in_code
-[10] http://ctp.di.fct.unl.pt/~mpm/pubs/PhD-Monteiro-2005.pdf
-[11] https://www.di.uminho.pt/~jmf/PUBLI/papers/2003-dsoa.pdf
-[12] https://www.researchgate.net/publication/4010983_Identifying_refactoring_opportunities_using_logic_meta_programming
-[13] https://www.semanticscholar.org/paper/Tool-Supported-Discovery-and-Refactoring-of-in-Code-Dudziak-Wloka/0fa233193950373e89c2b94b2557437723437ab0
-[14] https://www.researchgate.net/publication/220349622_Detecting_Bad_Smells_in_AspectJ
-[15] https://www.sciencedirect.com/science/article/abs/pii/S0950584914001918
-[16] https://www.academia.edu/1009578/Detecting_bad_smells_in_AspectJ
-[17] https://arxiv.org/pdf/1908.05399.pdf
-[18] https://arxiv.org/pdf/2012.08842.pdf
-[19] https://www.researchgate.net/publication/264791334_Identifying_Refactoring_Opportunities_in_Object-Oriented_Code_A_Systematic_Literature_Review
-[20] https://www.semanticscholar.org/paper/A-Classification-Framework-and-Survey-for-Design-P%C3%A9rez-L%C3%B3pez/250b17c498a9262d208a6b749c6057ca1667c1aa
 
-\section{Analysis}
 
+
+
+
+
+
+
+
+\section{Reengineering}
+\cite{SoftwareEvolutionMens2008}
+
+
+    
+\subsection{Definition and Process}
+
+
+\subsection{Role of Restructuring and Refactoring}
+
+
+
+
+
+\section{Development Models}
+\cite{DevelopmentModels2010}
+
+\subsection{Traditional and Agile Models}
+
+\subsection{Impact on Software Evolution}

@@ -1,34 +1,101 @@
 \typeout{NT FILE chapter4.tex}%
 
-\chapter{Work Plan}
-\label{cha:Work Plan}
+\chapter{Preliminary work}
+\label{cha:Preliminary work}
 
 \prependtographicspath{{Chapters/Figures/Covers/}}
 
-The work plan for this thesis is divided into several phases:
+\section{Preliminary Work}
 
-\section{Analysis}
+\subsection{Refactoring the Codebase}
 
-Analyze the current state of the application and code, identify issues and opportunities for improvement.
+\subsubsection{Request 69168 - Restructuring the Application Profiles and Permissions}
 
-\section{Design}
+The objective of this task is to restructure the application profiles and permissions according to a new matrix, aiming to reduce code duplication in dozens of classes and address various code smells. This refactoring effort is driven by the findings of a recent code audit, which identified significant software quality issues. By reorganizing the profiles and permissions, we anticipate improvements in code maintainability and readability.
 
-Design proposals for optimizations and extensions according to stakeholders’ requirements and using KLx technologies and methodologies.
+\textbf{Steps Involved:}
+\begin{itemize}
+    \item Analyze the current structure of application profiles and permissions.
+    \item Design a new matrix that optimizes the structure and reduces redundancy.
+    \item Refactor the existing codebase to align with the new matrix.
+    \item Test the refactored code to ensure functionality remains intact.
+\end{itemize}
 
-\section{Implementation}
+\subsubsection{Request 67857 - Correcting Anomalies in the Permission Catalog}
 
-Implement the proposed solutions and validate them with senior developers.
+This task focuses on correcting anomalies identified in the permission catalog for end users. Addressing these anomalies is crucial for ensuring the proper functioning of the permission system and enhancing overall user experience.
 
-\section{Testing}
+\textbf{Steps Involved:}
+\begin{itemize}
+    \item Review and document the identified anomalies.
+    \item Investigate the root causes of these anomalies.
+    \item Implement code changes to correct the anomalies.
+    \item Validate the corrections through extensive testing.
+\end{itemize}
 
-Test the proposed solutions in a controlled environment.
+\subsection{Implementing Version Control with GIT}
 
-\section{Evaluation}
+The implementation of version control using GIT is a multi-phase process that ensures efficient tracking and management of code changes. This section outlines the steps already accomplished and the phases that are yet to be executed.
 
-Evaluate the outcomes and impacts of the proposed optimizations with stakeholders and document feedback and lessons learned.
+\textbf{Phases Already Accomplished:}
+\begin{itemize}
+    \item Code clean-up in preparation for migration.
+    \item Repository creation.
+    \item Script variabilization.
+    \item AD String mapping.
+    \item Adaptation of scripts for different environments.
+    \item Definition of access, extensions, and variabilization.
+    \item Team training on the new version control system.
+\end{itemize}
 
-\section{Delivery}
+\subsection{Automating Deployment with GITLAB}
 
-Deliver the proposed solutions for deployment with the agreement of the stakeholders.
-This work plan will guide the process of improving and extending the KLx system, ensuring that all steps are carried out systematically and effectively.
+The automation of the deployment process using GITLAB aims to streamline the deployment across various environments. This task involves identifying inefficiencies in the current process and transitioning it from a local environment to a cloud-based one, integrated with a versioning tool.
+
+\textbf{Steps Involved:}
+\begin{itemize}
+    \item Document and analyze the current deployment process.
+    \item Identify and address shortcomings in the current process.
+    \item Evaluate the feasibility of using native development tools for automation.
+    \item Transition the deployment process to a cloud-based environment.
+    \item Integrate the deployment process with the versioning tool.
+\end{itemize}
+
+\subsection{Developing New Features and Integrations}
+
+The development of new features and integrations is driven by stakeholder demands, utilizing technologies such as PowerShell, C\#, XML, JSON, and SQL. Below are examples of specific integration requests.
+
+\subsubsection{Request 68123 - Integration of Application L684 SAS Serveur}
+
+This request involves integrating the application L684 SAS Serveur through both manual and AD provisioning.
+
+\textbf{Steps Involved:}
+\begin{itemize}
+    \item Analyze the requirements for the integration of L684 SAS Serveur.
+    \item Develop the necessary scripts for manual and AD provisioning.
+    \item Test the integration to ensure compatibility and functionality.
+\end{itemize}
+
+\subsubsection{Request 68184 - Integration of Application L716-SIMPLISSIMO}
+
+This request focuses on the manual provisioning of the application L716-SIMPLISSIMO.
+
+\textbf{Steps Involved:}
+\begin{itemize}
+    \item Gather requirements for the integration of L716-SIMPLISSIMO.
+    \item Develop and implement manual provisioning scripts.
+    \item Validate the integration through rigorous testing.
+\end{itemize}
+
+\subsubsection{Request 68360 - Integration of Application L099A-Tables START}
+
+This task involves the manual provisioning of the application L099A-Tables START.
+
+\textbf{Steps Involved:}
+\begin{itemize}
+    \item Identify the requirements for the integration of L099A-Tables START.
+    \item Create and execute manual provisioning scripts.
+    \item Conduct testing to ensure the integration meets all specified requirements.
+\end{itemize}
+
 
