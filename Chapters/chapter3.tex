@@ -20,23 +20,30 @@
 
 "Refactoring is the art of improving the design of existing code. Refactoring provides us with ways to recognize problematic code and gives us recipes for improving it." \cite{wake2004refactoring} 
 
-\cite{RefactoringFowler2002} \cite{SurveyRefactoring2004} \cite{estructuringArnold1989}
+\cite{Refactoring2020} \cite{30yearsSoftwareRefactoring2020} \cite{smellsRefactoring2020} \cite{RefactoringFowler2002} \cite{SurveyRefactoring2004} \cite{estructuringArnold1989}
 
-    
-\subsection{Definition and Objectives}
+\subsection{Explanation and Goals}
+An intrinsic property of software in a real-world environment is its need to evolve. As the software is enhanced, modified, and adapted to new requirements, the code becomes more complex and drifts away from its original design, thereby lowering the quality of the software. As a result, a significant portion of the total software development cost is devoted to software maintenance, which includes repairing design and implementation faults, adapting software to new environments, and adding or modifying functionalities   . Despite advances in software development methods and tools, these improvements often lead to increased complexity as more new requirements are implemented within the same timeframe .
 
-\subsection{Impact}
+To cope with this spiral of complexity, there is an urgent need for techniques that reduce software complexity by incrementally improving the internal software quality. The research domain that addresses this problem is referred to as restructuring    . In object-oriented software development, this practice is specifically known as refactoring . According to Chikofsky and Cross , restructuring is defined as "the transformation from one representation form to another at the same relative abstraction level, while preserving the subject system’s external behavior (functionality and semantics)." This process often involves altering code to improve its structure without introducing new functionalities but may lead to better observations that suggest beneficial changes.
 
-\subsection{Techniques, Practices and Tools}
+The term "refactoring" was first introduced by William Opdyke in his PhD dissertation, which described refactoring as "the process of changing a [object-oriented] software system in such a way that it does not alter the external behavior of the code, yet improves its internal structure"  . The key idea is to redistribute classes, variables, and methods across the class hierarchy to facilitate future adaptations and extensions.
+
+\subsection{Effects}
+In the context of software evolution, refactoring and restructuring are used to improve various software quality attributes such as extensibility, modularity, reusability, complexity, maintainability, and efficiency. These techniques are also employed in reengineering, which involves examining and altering a subject system to reconstitute it in a new form and subsequently implementing this new form . This process is essential for converting legacy or deteriorated code into a more modular or structured form  and for migrating code to different programming languages or paradigms .
+
+Studies have shown that refactoring can significantly reduce developers' time and assist in detecting, fixing, and reducing software bugs. Research by Mens et al. provided an overview of the impact of refactoring on software processes, comparing different approaches and their effects on attributes like maintainability and testability   . Refactoring has also been linked to reducing technical debt and mitigating the negative impact of code smells on software maintainability and evolution   .
+
+\subsection{Methods, Approaches, and Instruments}
+Refactoring typically involves several distinct activities, including identifying areas of the software that need improvement, determining appropriate refactoring methods, ensuring that refactoring preserves the system's behavior, applying the refactoring, assessing the impact on quality characteristics, and maintaining consistency between the refactored code and other software artifacts such as documentation and design documents   . Various tools and techniques support these activities, aiding developers in systematically improving code quality.
+
+Research has monitored projects on platforms like GitHub to identify refactoring activities and understand the contexts in which they occur. Interviews and surveys with developers have revealed common refactoring practices, such as method extraction, which is often motivated by the need to support new feature development. Other studies, such as those by Elish et al., have proposed classifications of refactoring methods based on their measurable effects on software quality attributes   . Additionally, tools for detecting code smells and supporting refactoring have been extensively reviewed, providing valuable insights for practitioners and researchers   .
+
+\subsection{Challenges and Recommended Approaches}
+Despite the frequent application of refactoring, understanding the composition and sequence of refactoring operations based on developers' intentions remains challenging. Developers often struggle to justify time spent on refactoring when the functionality remains unchanged. However, refactoring is a crucial investment for future development, particularly for long-lived software involving multiple developers. Studies have explored the motivations behind code changes and the introduction and removal of code smells, emphasizing the need for further research to identify best practices for maximizing the benefits of refactoring in software projects   .
 
 \subsection{Challenges and Best Practices}
-
-
-
-
-
-
-
+Software maintenance is an essential activity, consuming 50 to 80 of total software costs, according to Welf Löwe and Panas (2005) and Telea and Voinea (2011). Maintenance tasks include repairing design and implementation faults, adapting software to different environments, and adding or modifying functionalities   . One of the major challenges in maintenance is the lack of helpful documentation, making complex source code the primary reliable source of information about a system. Several studies have identified common pitfalls, anti-patterns, and code smells that negatively impact maintainability. Code smells, which are violations of coding design principles, increase technical debt and complicate software maintenance and evolution. Refactoring is essential for removing code smells and improving software quality   . However, the process of detecting smells and applying appropriate refactorings remains challenging. Automated support for these tasks is crucial, as highlighted by Moha et al. (2010) and others.
 
 
 
