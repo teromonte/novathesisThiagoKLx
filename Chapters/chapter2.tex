@@ -21,13 +21,31 @@ This chapter is divided into several sections. The first one gives an introducti
 \cite{ManagingMaintenance1983}
 \cite{lientz1980software}
 \cite{MaintenanceGlass1998}
+
+\section{Software Quality}
+
+The concept of software quality encompasses multiple dimensions, primarily revolving around the maintainability, reliability, and overall performance of software systems throughout their lifecycle. This section delves into these aspects, informed by notable works in the field, and aims to elucidate the critical role of maintenance and the evolving understanding of software quality.
+
+\subsection{The Role of Maintenance in Software Quality}
+
+Historically, the literature has underscored the importance of investing resources during the initial development phase to enhance the maintainability of software applications. The assumption underlying this approach is that application programs will have a long lifespan, during which maintenance costs will constitute a significant portion of the total costs. According to Lientz and Swanson (1980), maintenance expenditures can range from 40 to 75 of the total application program costs, highlighting the economic significance of these activities . Maintenance costs, as defined by these authors, encompass expenses incurred post-deployment to correct errors, expand functionality, and optimize execution.
+
+Despite extensive research and the development of numerous methodologies to mitigate maintenance costs, this area remains a substantial concern for management information systems (MIS) practitioners. Braddock (1983) and Boehm (1994) offer comprehensive recommendations covering organizational, administrative, and technical strategies to address this issue  . Nevertheless, the persistent challenge of high maintenance costs suggests a need for continuous refinement of these strategies and a deeper understanding of their practical applications.
+
+\subsection{Reframing Maintenance: A Solution, Not a Problem}
+
+Glass (1998) challenges the traditional view that software maintenance is merely a problem to be minimized. Instead, he argues that maintenance should be seen as an inherent and beneficial aspect of the software lifecycle. This perspective hinges on two critical insights: software's inherent flexibility and the nature of maintenance activities. Glass posits that the majority of maintenance work (around 60) is focused on enhancements and adding new functionality, rather than merely fixing errors, which constitutes only 17 of maintenance efforts . This highlights the adaptive and evolutionary nature of software, positioning maintenance as a means to continually improve and refine software systems in response to changing user needs and technological advancements.
+
+Furthermore, research by Dekleva (1992) supports this view by demonstrating that systems built with modern development methodologies, such as structured methods and CASE tools, tend to incur higher maintenance costs. However, these costs are associated with the systems' improved maintainability and ease of enhancement. Dekleva’s study found that while initial maintenance costs might be lower for well-built systems, they increase over time as users identify new requirements and the system evolves to meet these needs . This reinforces the idea that maintenance is not merely a cost to be minimized but an essential process for sustaining and enhancing software quality over time.
+
+\subsection{Strategies for Effective Maintenance Management}
+
+Effective management of software maintenance is crucial for sustaining software quality and reducing long-term costs. The literature offers various strategies to achieve this, focusing on both technical and organizational aspects. From a technical perspective, Boehm (1994) suggests rigorous documentation, modular design, and adherence to coding standards to simplify future maintenance efforts. Organizational strategies, as highlighted by Braddock (1983), include establishing clear maintenance processes, regular training for maintenance personnel, and fostering a culture that values continuous improvement and proactive problem-solving  .
+
+The synthesis of these perspectives indicates that maintaining high software quality requires a holistic approach, integrating both technical rigor and effective organizational practices. By viewing maintenance as a continuous, value-adding process rather than a mere expense, organizations can better allocate resources and cultivate a development environment that supports sustainable software evolution.
+
+In conclusion, the insights from these seminal works underscore the multifaceted nature of software quality and the pivotal role of maintenance. As software systems become increasingly integral to organizational operations, understanding and implementing effective maintenance strategies will be key to ensuring their long-term success and reliability.
     
-\subsection{Definition and Importance}
-
-
-
-\subsection{Metrics and Evaluation}
-
 
 
 \section{Lehman’s Laws of Software Evolution}
@@ -35,18 +53,21 @@ This chapter is divided into several sections. The first one gives an introducti
 \cite{LehmanLaws1980}
 \cite{Lehman1978ProgramsCS}
 \cite{Lehman1996Laws}
-\cite{SoftwareEvolution2010}
-
-\subsection{Overview of Lehman’s Laws}
 
 
+Lehman’s Laws of Software Evolution present a framework for understanding the dynamics of software systems over time. These laws, formulated by Meir M. Lehman and Les Belady, are based on empirical studies of industrial software systems and their development processes. Below, we extract and paraphrase key information from notable sources to present a comprehensive understanding of Lehman's laws in a structured format.
 
-\subsection{Relevance to Banking Systems}
+\subsection{Continuing Change}
 
+E-type programs, which are systems embedded in the real world and subject to continuous operation, must be perpetually adapted to remain functional and satisfactory. The need for this continual change arises from the mismatch that develops between the software and its evolving operational environment. Over time, as the software is used and the environment in which it operates changes, feedback pressures necessitate adaptation. This process of constant adaptation ensures that the software does not become obsolete. The dynamics of E-type software are akin to biological organisms, requiring continuous evolution to cope with external pressures and changing conditions. 
 
+\subsection{Increasing Complexity}
 
+As software evolves, its complexity tends to increase unless deliberate efforts are made to manage and reduce it. This phenomenon can be likened to the second law of thermodynamics, where entropy in a closed system increases over time. In the context of software, as changes are successively implemented to adapt to new requirements or correct issues, the interactions and dependencies among system components grow, leading to increased complexity. If this complexity is not managed, maintaining and further developing the software becomes increasingly challenging. Balancing efforts between progressive changes (adding new features) and anti-regressive activities (complexity management) is crucial, though resources for both are always limited. Consequently, the rate of system growth tends to decline as the system ages.
 
+\subsection{Self-Regulation and Feedback}
 
+The process of software evolution is inherently self-regulating, characterized by feedback mechanisms that stabilize and guide the development trajectory. In industrial environments, software evolution is driven by a technical team within a larger organizational framework, where managerial and operational rules create checks and balances. These feedback loops ensure that the evolution process remains stable and controlled, with attributes of the product and process exhibiting near-normal distribution. The multi-loop, multi-level feedback system that constitutes E-type software evolution incorporates a range of managerial and implementation decisions, resulting in a self-stabilizing growth pattern. Understanding and leveraging these feedback mechanisms is essential for effectively managing software evolution and improving the system.
 
 
 
