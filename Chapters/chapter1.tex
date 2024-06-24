@@ -15,52 +15,61 @@
 
 \section{Context and Motivation}
     
-The KLx employee and application management system, also known as AnA, serves as a pivotal instrument in automating Identity Governance and Administration (IGA) processes for over 5000 employees within the Credit Agricole Group. This on-premises software, developed and maintained by Netwrix, was procured by the CA Leasing and Factoring branch in 2018.
+KLx Employee Management System, AnA: This is among the most important tools for the automation of the IGA process, which takes in more than 5000 employees of the Credit Agricole group. Netwrix developed this on-premises solution. End users are the users at the CA Leasing and Factoring branch who acquired this software in 2018.
 
-From that point forward, the team at KLx, based in Lisbon, has been diligently working to maintain, configure, and enhance the application in accordance with the specifications and requests from the Functional team in France. This team, in turn, receives its directives from the human resources department, the ultimate customer of the application.
+Since then, the KLx team in Lisbon has worked around the clock to keep configuring the application and upgrading it to meet the needs and requirements as expressed by the Functional team in France, which, in turn, takes its orders from the human resources department—the end user of this application.
 
-However, the system’s complexity has escalated due to the swift integration of various company departments into the software and changes in the environment. This has made maintaining the system increasingly challenging. The impetus for this work originates from the understanding that the quality of the code and it's engineering process directly influences the system’s efficiency and effectiveness.
+However, complexity of the system has increased over the integration of different departments of the company into the software and also because of the changes taking place in the environment. This has made it more and more difficult to maintain the system. The work is motivated by a realization that the quality of the code, along with its engineering process, determines the efficiency and effectiveness of the system.
 
-In such scenarios, the theories and methods of Software Quality become crucial in software development. The goal is to identify the most critical points in the solution and development workflow that need improvement. By employing Software Quality methods, we aim to enhance the quality and, consequently, the productivity of the team.
+In these situations, the theories and methodologies of Software Quality become essential in software development. The intention is to identify some critical points of improvement in the solution and in the development workflow. By using Software Quality methods, we intend to better quality with productivity being increased as well.
 
 \section{Problem Definition}
 
-The incorporation of numerous departments within the organization, along with the escalating number of applications overseen by AnA, has led to a substantial surge in complexity and a corresponding decline in the delivery rate. This situation has been exacerbated by factors such as stringent deadlines and that the team received the configuration code in the middle of its development.
+The incorporation of numerous departments within the organization, along with the escalating number of applications managed by AnA, has led to a substantial surge in complexity and a corresponding decline in the delivery rate. With all these factors working against it, another factor that has come into play is that rigid deadlines were imposed and the configuration code was received by the team when it was partly developed.
 
-More specifically, the source code, which currently comprises approximately 20,000 lines distributed across over 200 files, lacks any form of version control system. Instead, it has been managed solely through manual backups stored in shared directories. This approach has resulted in errors that could have been circumvented with the security and organization provided by a version control system.
+To put it more concretely: at present, the source code consists of about 20,000 lines spread over 200-plus files. It is not maintained under any version control system; manual backups in shared directories are the only solution. This way of doing things has led to mistakes that could have been avoided with the safety and order provided by a version control system.
 
-Alongside the lack of versioning, another issue that has been a bottleneck in the team’s delivery process is the way developments are delivered in different test and production environments. Currently, all team members share two virtual machines that are used to run an instance of AnA with the configuration being tested. This factor results in a significant amount of wasted time.
+Besides the versioning, other factors further upstream that have bottlenecked during the delivery process include the way developments are delivered in the various test and production environments. Currently, all the team members share two virtual machines, so an instance of AnA is run with the configuration being tested. This factor causes a severe waste of time.
 
-Additionally, the source code exhibits several recurring issues related to code quality, particularly code duplication. Coupled with frequent business changes, each alteration must be replicated across various contexts. Consequently, this has introduced several inconsistencies into the codebase, which has grown in complexity over time.
+Additionally, the source code also reveals some recurrent issues related to the quality of the code, in this case, code duplication. Since there are pretty frequent changes in business, for each such change, there are several copies of those changes that need to be made in corresponding contexts. These, in turn, have introduced several inconsistencies into the system, the overall complexity of which has grown with time.
 
-In summary, the challenges faced by our team—lack of version control, manual backups, and inefficient development processes—require urgent attention. Implementing effective solutions will not only enhance code quality but also streamline our delivery process. As we move forward, addressing these issues will be crucial for maintaining a robust and organized codebase.
+In general, the challenges our team experiences with versioning control, manual backup, and a slow development process need urgent addressing. The answers to effective solutions will thus not only improve the quality of the code but also streamline the delivery process. In the future, effective ways need to be found to solve these issues and not perturb the codebase into fragility and anarchy.
 
 \section{Main Contributions}
 
-As a dedicated team member, I have taken on critical responsibilities within our project, all aimed at enhancing the overall quality, efficiency, and functionality of our software system.
+As a committed member of our team, I have embraced pivotal roles within our project that contribute significantly to the enhancement of our software system’s quality, efficiency, and functionality.
 
-One of my primary tasks involves meticulously refactoring specific modules within our codebase. By identifying and addressing code smells, I achieve two key objectives:
+One of my key responsibilities is the detailed refactoring of specific modules in our codebase. This involves the careful identification and resolution of code smells, accomplishing two primary goals:
 
-1. Code Readability: I enhance the clarity and comprehensibility of our code. Clear, well-structured code is easier to maintain and troubleshoot.
-2. Maintainability: Through thoughtful refactoring, I reduce redundancy and streamline our codebase. This not only improves the current state of the application but also ensures easier maintenance in the future.
+To present the two key outcomes of your refactoring efforts in LaTeX format, you could structure your list as follows:
 
-For example, I am currently restructuring the application profiles and permissions based on a new matrix. This effort significantly reduces code duplication across various classes and addresses software quality issues identified during code auditing. Ensuring accurate permissions is crucial for both security and functionality.
+\begin{itemize}
+  \item \textbf{Readability:} I enhance the clarity and structure of our code, making it easier to maintain and debug.
+  \item \textbf{Maintainability:} My refactoring minimizes redundancy and optimizes the code structure. This improves the application's current performance and facilitates future maintenance efforts.
+\end{itemize}
 
-Additionally, I am implementing version control using GIT. After evaluating evolving methodologies in software development, I chose the most suitable approach for our team. I have extensively documented this chosen method to ensure its effectiveness. This documentation serves as a valuable resource for our team members. I am actively educating our team on the new approach, facilitating its smooth implementation. So far, we have completed several phases, including code clean-up, repository creation, script variabilization, and training.
+For instance, I am currently overhauling the application profiles and permissions using a new organizational matrix. This task significantly decreases code repetition across different classes and tackles quality issues highlighted during our code reviews. Ensuring precise permissions is vital for maintaining both security and functionality.
 
-Furthermore, I am automating the deployment process across various environments using GITLAB. I thoroughly assess the current deployment process to identify any shortcomings or bottlenecks. Exploring the feasibility of leveraging native development tools for seamless deployment, I aim to integrate deployment with our chosen versioning tool. This enhancement will elevate overall development quality.
+Moreover, I am advancing our version control practices by implementing GIT. After reviewing various contemporary software development methodologies, I selected the most fitting approach for our team. I have thoroughly documented this methodology to confirm its utility. Additionally, I am guiding our team through this new system, ensuring a seamless transition. Our progress includes phases like code cleanup, repository setup, script variabilization, and staff training.
 
-Collaborating closely with stakeholders, I am actively involved in developing new features and integrations. These enhancements span various technologies, including PowerShell, C, XML, JSON, and SQL. Notable upcoming integrations include integrating the L684 SAS Serveur application (manual + AD provisioning), the L716-SIMPLISSIMO application (manual provisioning).
+I am also streamlining the deployment process across different environments using GITLAB. I carefully evaluate the existing deployment strategies to pinpoint any inefficiencies or constraints. By considering the integration of native development tools for smoother deployment, I aim to align this process with our version control tools, thus enhancing the overall quality of development.
+
+In collaboration with stakeholders, I am deeply involved in the development of new features and integrations across various technologies such as PowerShell, C, XML, JSON, and SQL. Upcoming significant projects include integrating the L684 SAS Server application (manual + AD provisioning) and the L716-SIMPLISSIMO application (manual provisioning).
 
 
 \section{Document Outline}
 
-This document is structured into three main parts: the introduction, the state of the art, and the work plan.
 
-The initial section provides essential background information on the topics under discussion and outlines their relevance. It sets the stage for the subsequent content by explaining the context and significance of the research. Within this introduction, we also define the problem that this thesis aims to address. Additionally, we highlight the innovations that our proposed product brings to the field.
+This document is structured into five main sections, each crafted to thoroughly explore the research topic. Below is a brief summary of each section:
 
-The state of the art is divided into several interconnected sections. The first part encompasses all relevant aspects except for the final one. Here, we delve into various definitions that are crucial for understanding the challenges inherent in our project. These definitions serve as building blocks for the subsequent discussions. Furthermore, we explore different approaches that have been proposed to tackle the identified problems. By examining existing solutions, we gain insights into the landscape of related research.
-
-In the second part of the state of the art, we focus on other projects that share similarities with our work. By analyzing these related endeavors, we can draw parallels, identify gaps, and position our research within the broader context. This comparative exploration enriches our understanding and informs our approach.
-
-The final section outlines our work plan. It includes a detailed Gantt chart that visualizes the timeline of tasks and milestones. Additionally, we provide a comprehensive description of our proposed solution, complemented by a sketch that illustrates key components.
+\begin{enumerate}
+    \item \textbf{Introduction}: This section introduces the overall theme of the research, explaining its importance and the fundamental objectives that guide the study.
+    
+    \item \textbf{Background}: Provides a comprehensive background to lay the foundational knowledge necessary for understanding the research topic. It sets the context within which the research questions have been framed.
+    
+    \item \textbf{Related Work}: Discusses existing research and projects that are directly relevant to the study. This comparison helps to highlight the unique aspects of the current research and situates it within the existing academic literature.
+    
+    \item \textbf{Preliminary Work}: Describes any initial experiments, pilot studies, or preparatory research conducted to validate the feasibility of the research approach and methodologies.
+    
+    \item \textbf{Work Plan}: Outlines the methodology, planned activities, and timeline for the research. This section is crucial for detailing the steps that will be followed to achieve the research goals and includes milestones and expected outcomes.
+\end{enumerate}

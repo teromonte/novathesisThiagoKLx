@@ -10,122 +10,96 @@
 
 \chapter{Related work}
 \label{cha:Related work}
-    
+  
 \prependtographicspath{{Chapters/Figures/Covers/}}
+
+\cite{wake2004refactoring}
+\cite{estructuringArnold1989}
+\cite{articleOpdyke}
+\cite{RefactoringFowler2002}
+\cite{SurveyRefactoring2004}
+\cite{smellsRefactoring2020}
+\cite{30yearsSoftwareRefactoring2020}
+\cite{ManagingMaintenance1983}
 
 \section{Restructuring and Refactoring}
 
-"Refactoring is the art of improving the design of existing code. Refactoring provides us with ways to recognize problematic code and gives us recipes for improving it." \cite{wake2004refactoring} 
-
-\cite{Refactoring2020} \cite{30yearsSoftwareRefactoring2020} \cite{smellsRefactoring2020} \cite{RefactoringFowler2002} \cite{SurveyRefactoring2004} \cite{estructuringArnold1989}
+"Refactoring is the art of improving the design of existing code. Refactoring provides us with ways to recognize problematic code and gives us recipes for improving it."
 
 \subsection{Explanation and Goals}
-An intrinsic property of software in a real-world environment is its need to evolve. As the software is enhanced, modified, and adapted to new requirements, the code becomes more complex and drifts away from its original design, thereby lowering the quality of the software. As a result, a significant portion of the total software development cost is devoted to software maintenance, which includes repairing design and implementation faults, adapting software to new environments, and adding or modifying functionalities. Despite advances in software development methods and tools, these improvements often lead to increased complexity as more new requirements are implemented within the same timeframe.
 
-To cope with this spiral of complexity, there is an urgent need for techniques that reduce software complexity by incrementally improving the internal software quality. The research domain that addresses this problem is referred to as restructuring. In object-oriented software development, this practice is specifically known as refactoring. According to Chikofsky and Cross , restructuring is defined as "the transformation from one representation form to another at the same relative abstraction level, while preserving the subject system’s external behavior (functionality and semantics)." This process often involves altering code to improve its structure without introducing new functionalities but may lead to better observations that suggest beneficial changes.
-
-The term "refactoring" was first introduced by William Opdyke in his PhD dissertation, which described refactoring as "the process of changing a [object-oriented] software system in such a way that it does not alter the external behavior of the code, yet improves its internal structure". The key idea is to redistribute classes, variables, and methods across the class hierarchy to facilitate future adaptations and extensions.
+Software is modified and inevitably evolves, generally increasing in complexity and drifting away from its original design. Such quality degradation makes maintenance necessary for the repair of faults, adaptation to new environments, and addition of functionalities. Methods have to be provided for reducing complexity while improving internal software quality. Restructuring or refactoring is a transformation of code at the same level of abstraction that aims to preserve external behavior in object-oriented development.
+The term "refactoring" was coined by William Opdyke, who defined it as improving a software system's internal structure without changing its external behavior—better facilitating future adaptations and extensions.
 
 \subsection{Effects}
-In the context of software evolution, refactoring and restructuring are used to improve various software quality attributes such as extensibility, modularity, reusability, complexity, maintainability, and efficiency. These techniques are also employed in reengineering, which involves examining and altering a subject system to reconstitute it in a new form and subsequently implementing this new form. This process is essential for converting legacy or deteriorated code into a more modular or structured form  and for migrating code to different programming languages or paradigms.
 
-Studies have shown that refactoring can significantly reduce developers' time and assist in detecting, fixing, and reducing software bugs. Research by Mens et al. provided an overview of the impact of refactoring on software processes, comparing different approaches and their effects on attributes like maintainability and testability. Refactoring has also been linked to reducing technical debt and mitigating the negative impact of code smells on software maintainability and evolution.
+It improves software quality attributes related to extensibility, modularity, and reusability, reduces complexity improves maintainability, and enhances efficiency. They transform the legacy or deteriorated code into a more modular form and support code migration to other languages or paradigms. The refactoring can aid in reducing development time, detecting bugs, reducing technical debt, and reducing the impact that code smells would have on maintainability.
 
 \subsection{Methods, Approaches, and Instruments}
-Refactoring typically involves several distinct activities, including identifying areas of the software that need improvement, determining appropriate refactoring methods, ensuring that refactoring preserves the system's behavior, applying the refactoring, assessing the impact on quality characteristics, and maintaining consistency between the refactored code and other software artifacts such as documentation and design documents. Various tools and techniques support these activities, aiding developers in systematically improving code quality.
 
-Research has monitored projects on platforms like GitHub to identify refactoring activities and understand the contexts in which they occur. Interviews and surveys with developers have revealed common refactoring practices, such as method extraction, which is often motivated by the need to support new feature development. Other studies, such as those by Elish et al., have proposed classifications of refactoring methods based on their measurable effects on software quality attributes. Additionally, tools for detecting code smells and supporting refactoring have been extensively reviewed, providing valuable insights for practitioners and researchers.
+Refactoring includes the steps of identifying the points to be improved, defining proper methods, ensuring behavior preservation, applying refactoring, measuring the impact of refactoring on quality enhancement, and lastly, keeping in tandem or consistency with other software artifacts. Several tools take part in these activities in a systematic effort to improve code quality. The research on platforms like GitHub has spotlighted standard practices regarding refactorings—method extraction—and unveiled smell detection and refactoring tools.
 
 \subsection{Challenges and Recommended Approaches}
-Despite the frequent application of refactoring, understanding the composition and sequence of refactoring operations based on developers' intentions remains challenging. Developers often struggle to justify time spent on refactoring when the functionality remains unchanged. However, refactoring is a crucial investment for future development, particularly for long-lived software involving multiple developers. Studies have explored the motivations behind code changes and the introduction and removal of code smells, emphasizing the need for further research to identify best practices for maximizing the benefits of refactoring in software projects.
 
-\subsection{Challenges and Best Practices}
-Software maintenance is an essential activity, consuming 50 to 80 of total software costs, according to Welf Löwe and Panas (2005) and Telea and Voinea (2011). Maintenance tasks include repairing design and implementation faults, adapting software to different environments, and adding or modifying functionalities. One of the major challenges in maintenance is the lack of helpful documentation, making complex source code the primary reliable source of information about a system. Several studies have identified common pitfalls, anti-patterns, and code smells that negatively impact maintainability. Code smells, which are violations of coding design principles, increase technical debt and complicate software maintenance and evolution. Refactoring is essential for removing code smells and improving software quality. However, the process of detecting smells and applying appropriate refactorings remains challenging. Automated support for these tasks is crucial, as highlighted by Moha et al. (2010) and others.
-
-
+It is hard for developers to understand refactoring operations based on the intentions of other developers. Modification that does not change any functionality is always hard to explain. However, refactoring is one of the essential future developments, particularly for long-lived software developed by many different developers. Some studies show an understanding of the motivations behind code changes or the introduction and removal of code smells; hence, it calls for best practices to maximize the benefit affirmed by refactoring. Challenges and Best Practices Software maintenance accounts for a large portion of the costs associated with software. These activities include fault repair, adaptation to various environments, and modification of functionalities. Some factors that hinder easy maintenance include unhelpful documentation, where complex source code is the only primary reliable information source. Common pitfalls, anti-patterns, and code smells are some negative factors impacting maintainability. Refactoring is such that it is principal to removing code smells and improving its quality; however, it is not easy to detect smells and apply the appropriate refactorings. Automated support for the same is hence critical.
 
 
 
 \section{Reverse Engineering}
-\cite{ReverseEngineering2011} \cite{ReverseEngineering2005} \cite{ReverseEngineering1990}
 
-Reverse engineering in software engineering is the process of deconstructing software systems to understand their components, interactions, and design. This practice is critical for maintaining, analyzing, and improving legacy systems, ensuring they meet new requirements or are adapted to new environments.
+Reverse engineering in the context of software engineering refers to the process of examining a system to identify its components, their interaction, and their respective designs. The practice is vital in maintaining, updating, and enhancing legacy systems to address new requirements or work in new environments \cite{ReverseEngineering2011}.
 
-\subsection{Techniques in Reverse Engineering}
+\subsection{Reverse Engineering Techniques}
 
-Static analysis is the initial step in reverse engineering, focusing on examining the software's source code without executing it. Static analyzers parse the code, extract relevant information, and construct models that represent the software’s structure and behavior. Challenges include dealing with different programming language variants, non-compilable code, and the need to extract specific facts without building a complete Abstract Syntax Tree (AST). Tools like Design Maintenance Systems (DMS) and island parsers help address these issues by parsing only the relevant fragments. When source code is unavailable, decompilation tools are used to convert binary code back into a higher-level language. Fact extractors such as Bauhaus and Columbus gather dependencies and metrics, while tools like CodeSurfer conduct semantic analyses, such as control dependence and data flow, to create detailed views of the software.
+Static Analysis: This is a technique wherein the software's source code is statically analyzed without its execution. Parsing only the relevant code fragments can be done with the help of tools like DMS and island parsers. In cases when source code is not available, decompilation tools are used to reverse the binary code into some higher-order language. The fact extractors and semantic analyzers give an idea about the dependencies and data flows of the software \cite{ReverseEngineering1990}.
 
-Dynamic analysis complements static analysis by examining the software during execution. It captures execution traces to gain insights into the system's runtime behavior, which static analysis cannot fully capture, such as pointer resolution and user interactions. Dynamic analysis involves instrumenting the program to collect execution data, which is then analyzed to identify patterns and operational profiles. Challenges include ensuring the program can be compiled and executed, selecting representative inputs, and managing large execution traces. Tools like Daikon analyze execution traces to identify invariants, and methods proposed by Hassan et al. filter traces to extract relevant information for specific tasks.
+Dynamic Analysis: This technique complements static analysis through observation of the software during execution to capture its runtime behavior. Instrumentation of the program is done for data collection with the view of finding out operational profiles and runtime problems, which are difficult or not possible to observe in static analysis—the tools for execution trace analysis help in discovering invariants and extracting relevant patterns from execution \cite{ReverseEngineering1990} \cite{ReverseEngineering2011}.
 
-Historical analysis uses data from versioning systems, bug tracking systems, and other repositories to understand how software artifacts have evolved. It provides insights into when and why changes were made, who made them, and which artifacts were affected. Historical analysis complements static and dynamic analyses by offering a temporal perspective on software changes. Key challenges include integrating information from heterogeneous repositories, analyzing differences between software versions, and grouping related changes. Techniques for historical analysis often involve matching bug tracking IDs with versioning system commit notes and utilizing tools like ChangeDistiller to provide detailed change information.
+Historical Analysis: Fetches data from versioning and bug tracking systems to analyze the evolution of software artifacts, seeking when and why the changes took place. The technique supports the integration of different sources of information and uses tools supporting efficient analysis for detecting changes between different versions of software and for change tracking as well \cite{ReverseEngineering1990}.
 
 \subsection{Key Concepts and Definitions}
 
-In the context of software engineering, forward engineering and reverse engineering are fundamental concepts. Forward engineering refers to the traditional process of moving from high-level abstractions and logical, implementation-independent designs to the physical implementation of a system. This process follows a sequence from requirements through design to implementation.
+Forward Engineering: This is the traditional process whereby one goes from high-level abstractions and designs to the concrete physical implementation of a system \cite{ReverseEngineering2005}.
+Reverse Engineering: This is the opposite of forward engineering since it deconstructs a system to support the creation of higher-level representations of the system, and it emphasizes the understanding of the structure and behavior predominantly without modification \cite{ReverseEngineering2005} \cite{ReverseEngineering2011}.
 
-Reverse engineering, in contrast, involves analyzing a system to identify its components and their interrelationships, creating representations of the system at a higher level of abstraction. It does not involve changing the subject system but aims to understand its structure and behavior. Reverse engineering can start at any level of abstraction or stage in the lifecycle, spanning from existing implementation to deciphering the requirements.
+Subareas of Reverse Engineering \cite{ReverseEngineering2011}: 
+\begin{itemize}
+  \item \textbf{Redocumentation:} It generates semantically equivalent documentation of a system by pretty printers and crossreference listings.
+  
+  \item \textbf{Design Recovery:} A process for re-creating higher-level abstraction using external information and domain knowledge.
+  
+  \item \textbf{Restructuring:} A system representation transformation that, to the greatest extent possible, is behavior-preserving concerning its external behavior and yet helps a system undergo improvement without interfering with its functionality.
+\end{itemize}
 
-Key subareas of reverse engineering include redocumentation, design recovery, and restructuring. Redocumentation involves creating or revising a semantically equivalent representation at the same abstraction level, often using tools like pretty printers, diagram generators, and cross-reference listing generators. Design recovery goes beyond basic redocumentation by incorporating domain knowledge, external information, and fuzzy reasoning to recreate higher-level abstractions. Restructuring transforms one representation form to another at the same abstraction level while preserving the system's external behavior.
+Reverse engineering is an essential means of software system analysis and improvement, especially for detailed and systematic disassembly and possible reuse of already existing software assets \cite{ReverseEngineering1990}.
+
 
 
 \section{Reengineering}
-\cite{SoftwareEvolutionMens2008}
 
-Reengineering is a comprehensive approach to examining and transforming existing software systems to meet new requirements or to improve their functionality and maintainability. This process is distinct from refactoring and restructuring as it often involves more extensive changes and may address broader aspects of the system, including its architecture and design principles.
+Reengineering is a comprehensive approach to examining and transforming software systems to meet new requirements or improve functionality and maintainability. It involves more extensive changes than refactoring or restructuring, often addressing broader aspects of the system, including its architecture and design principles.
 
 \subsection{Reengineering Patterns}
 
-Reengineering patterns provide structured methodologies to address common challenges in reengineering projects. These patterns encapsulate expert knowledge and proven practices, offering solutions that help navigate the complexities of modifying and enhancing software systems.
-
-Reengineering patterns share similarities with general software design patterns. They are context-specific, addressing recurring issues in software reengineering by providing solutions that balance various trade-offs and forces. Patterns are typically documented using a template that includes sections for the problem context, solution, forces and trade-offs, examples, known uses, and related patterns. This structure aids engineers in managing complex reengineering tasks by breaking them down into more manageable parts and guiding them through each step of the problem-solving process.
+Reengineering patterns provide structured methodologies to address common challenges in reengineering projects, encapsulating expert knowledge and proven practices. These patterns are context-specific and documented using a template that includes the problem context, solution, forces and trade-offs, examples, known uses, and related patterns. This helps engineers manage complex reengineering tasks by breaking them down into more manageable parts.
 
 \subsection{Refactoring and Reengineering Patterns}
 
-Refactoring focuses on improving the internal structure of the code without altering its external behavior, while reengineering often involves more significant changes to align the system with new requirements or modern standards. Refactoring patterns provide specific techniques for incremental code improvement, whereas reengineering patterns offer strategies for more comprehensive system transformation.
-
-Reengineering patterns extend beyond simple code refactoring. They guide engineers through substantial changes, such as migrating to new architectures or integrating new technologies. These patterns emphasize maintaining the functionality of the system while improving its underlying structures. For instance, the "Speculate About Design" pattern advocates creating and validating high-level design models against existing code, fostering a better understanding of the system and guiding future modifications.
+Refactoring focuses on improving code structure without altering external behavior, while reengineering involves significant changes to align the system with new requirements. Refactoring patterns provide incremental improvement techniques, whereas reengineering patterns offer strategies for comprehensive system transformation. For example, the "Speculate About Design" pattern involves creating and validating high-level design models against existing code.
 
 \subsection{Pattern Systems and Languages}
 
-Reengineering patterns are often organized into systems or languages that provide a cohesive framework for tackling complex reengineering tasks. A pattern system is a collection of related patterns that address different aspects of a problem, while a pattern language offers a more integrated approach, where patterns work together to achieve a comprehensive solution.
-
-A pattern system breaks down a large reengineering task into smaller, manageable parts, each addressed by a specific pattern. For example, a pattern system for dealing with legacy code might include patterns for introducing unit tests, managing dependencies, and gradually refactoring code.
-
-A pattern language, on the other hand, creates a tightly-knit group of patterns that collectively address a broad problem. This approach ensures that individual patterns integrate seamlessly, providing a holistic solution to the reengineering challenge. An example is the Temporal Details pattern language, which helps engineers manage the evolution of program representations over time by creating, refining, and integrating intermediate representations.
+Reengineering patterns are organized into systems or languages. A pattern system is a collection of related patterns addressing different aspects of a problem, while a pattern language integrates patterns to achieve a comprehensive solution. For instance, a pattern system for legacy code might include introducing unit tests and managing dependencies, while a pattern language like Temporal Details helps manage the evolution of program representations over time.
 
 \subsection{Difficulties in Reengineering Patterns}
 
-Reengineering patterns face several challenges that can impact their effectiveness and applicability. These difficulties include the lack of experience reports, the scarcity of recognized experts, and the absence of explicitly listed forces and trade-offs.
+Challenges in reengineering patterns include the lack of documented experience reports, scarcity of recognized experts, and the absence of explicitly listed forces and trade-offs. The lack of published reengineering experiences hinders pattern validation, and the field's lower prestige leads to fewer recognized experts. Despite these issues, works by authors like Fowler, Feathers, and Lanza are valuable for their structured approaches and practical solutions.
 
-One major challenge is the lack of documented experience reports. Software designers often do not publish their reengineering experiences due to professional reluctance or non-disclosure agreements. This scarcity of documented cases makes it difficult to validate patterns through multiple known uses, a standard criterion in the pattern community. For instance, the Design Disharmonies pattern relies on examples from open-source projects like ArgoUML to gain credibility, as few designers publicly share their reengineering stories.
+Leveraging reengineering patterns, systems, and languages helps software engineers manage the complexity of reengineering tasks, transforming legacy systems into robust, modern, and maintainable forms. Addressing the difficulties in reengineering patterns enhances their applicability and effectiveness in real-world scenarios.
 
-Another challenge is the scarcity of recognized experts in reengineering. This field is often viewed as less prestigious than forward engineering, leading to fewer experts being acknowledged. Effective reengineering requires a high level of expertise, encompassing all the skills needed for forward engineering plus additional reengineering-specific skills. Industrial sponsorship and recognition of reengineering expertise can help address this issue, as demonstrated by the Gold Mining pattern, which emphasizes the importance of tacit knowledge held by system maintainers.
+\cite{SoftwareEvolutionMens2008}
+\cite{RefactoringFowler2002}
 
-Additionally, some reengineering patterns do not explicitly list the forces and trade-offs involved, leading to skepticism about their validity as true patterns. Despite this, works by authors like Fowler, Feathers, and Lanza are included in discussions of reengineering patterns because they convey expert knowledge and provide practical solutions using a template-like structure. The structured approach and vocabulary they offer are invaluable for discussing and addressing complex redesign challenges.
-
-By leveraging reengineering patterns, pattern systems, and pattern languages, software engineers can effectively manage the complexity of reengineering tasks, ensuring that legacy systems are transformed into robust, modern, and maintainable forms. Addressing the inherent difficulties in reengineering patterns further enhances their applicability and effectiveness in real-world scenarios.
+\cite{DevelopmentModels2010} \cite{ContinuousEngineering2017}.
 
 
-\section{Development Models}
-\cite{DevelopmentModels2010}
-\cite{ContinuousEngineering2017}
-
-Throughout its short history, software development has been characterized by harmful disconnects between essential activities such as planning, development, and implementation. This problem is exacerbated by the episodic and infrequent performance of activities such as planning, testing, integration, and releases. Several emerging phenomena reflect attempts to address these problems. For example, Continuous Integration has emerged to eliminate discontinuities between development and deployment. In a similar vein, the recent emphasis on DevOps recognizes that the integration between software development and its operational deployment needs to be continuous. We argue that a similar continuity is required between business strategy and development, coining the term "BizDev" for this. These disconnects are particularly problematic given the need for reliability and resilience in the complex and data-intensive systems being developed today. We identify several continuous activities, which together we label as ‘Continuous’ (Continuous Star), presenting them as part of an overall roadmap for Continuous Software Engineering. We advocate for a continuous (but not necessarily rapid) software engineering delivery pipeline and conclude with a research agenda.
-
-\subsection{Traditional and Emerging Models}
-
-Software development has traditionally been characterized by harmful disconnects between critical activities such as planning, analysis, design, and programming. This is clearly reflected in the traditional waterfall process for software development. In recent decades, there has been widespread recognition that increasing the frequency of certain critical activities helps to overcome many challenges. Practices such as ‘release early, release often’ are well established in open-source software development, offering several benefits in terms of quality and consistency. The pervasive adoption of agile methods provides ample evidence of the need for flexibility and rapid adaptation in the current software development environment. Very complex and business-critical software is being developed, often by distributed teams. A tighter connection between development and execution is required to ensure errors are detected and fixed as soon as possible. The quality and resilience of the software is improved as a result. This is manifest in the increasing adoption of continuous integration practices, facilitated by tools such as Jenkins CI.
-
-However, a more holistic approach is necessary rather than one merely focused on continuous integration of software. Concepts such as Enterprise Agile and Beyond Budgeting have emerged as recognition that the benefits of agile software development will be sub-optimal if not complemented by an agile approach in related organizational functions such as finance and HR. Similarly, the recent emphasis on DevOps recognizes that the integration between software development and its operational deployment needs to be continuous. Complementing this, we argue that the link between business strategy and software development ought to be continuously assessed and improved, coining the term “BizDev” for this process.
-
-\subsection{Continuous Software Engineering}
-
-Rather than focusing solely on agile methods, a useful concept from the lean approach, namely that of ‘flow,’ is relevant in considering continuous software engineering. Rather than a sequence of discrete activities performed by distinct teams or departments, the argument for continuous software engineering is to establish a continuous movement, closely resembling the concept of flow found in lean manufacturing and product development. There has been much interest in lean software development in recent years, although it is often narrowly linked to agile practices. This paper extends the view on this topic by sketching a holistic view of these initiatives and positioning them within the continuous software engineering context. It illustrates how Lean Thinking is a useful and relevant lens to view continuous software engineering. We also look beyond software development to consider issues such as continuous use and trust, coining the term ‘Continuous’ (Continuous Star) to refer to this holistic view.
-
-\subsection{Challenges and Future Directions}
-
-The implementation of Continuous surfaces several high-level challenges for practice. One such challenge is to adopt a holistic view of a software production entity, focusing on pursuing the Continuous agenda and establishing a holistic view from customer to delivery. Another significant challenge is cultural and contextual adaptability. For example, the functionality being released in some continuous integration environments does not often require major architectural or design changes, which is not always feasible in real business environments. 
-
-The importance of context becomes immediately clear when considering examples such as avionics software, where frequent updates might not be practical or desirable. Similarly, in domains like telecommunications or embedded systems, rapid delivery of new functionality can be challenging due to dependencies on numerous interacting systems and outdated or missing documentation. Overcoming these barriers often requires significant cultural change within organizations and the integration of novel approaches such as open sourcing and crowd sourcing within the software engineering domain.
-
-In considering future directions, we argue for a fusion of knowledge sharing between software development and systems design. SDLC models for both disciplines can draw from domains outside their technological boundaries, such as behavior analysis, time management, and business management. The sharing of ideas from disparate sources should gather momentum, facilitated by repositories where various experiences can be shared and lessons learned can be analyzed statistically. This will provide a better foundation for making informed decisions and will contribute to the evolution of SDLC models and continuous software engineering practices.

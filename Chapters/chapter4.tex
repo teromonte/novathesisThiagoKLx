@@ -1,101 +1,74 @@
 \typeout{NT FILE chapter4.tex}%
 
-\chapter{Preliminary work}
-\label{cha:Preliminary work}
+\chapter{Preliminary Work}
+\label{Preliminary Work}
 
-\prependtographicspath{{Chapters/Figures/Covers/}}
+In this chapter we will discuss all the work already done by now to enhance the software quality of the application.
 
-\section{Preliminary Work}
+\section{Refactoring the Codebase}
 
-\subsection{Refactoring the Codebase}
+\subsection{Application Profiles}
 
-\subsubsection{Request 69168 - Restructuring the Application Profiles and Permissions}
-
-The objective of this task is to restructure the application profiles and permissions according to a new matrix, aiming to reduce code duplication in dozens of classes and address various code smells. This refactoring effort is driven by the findings of a recent code audit, which identified significant software quality issues. By reorganizing the profiles and permissions, we anticipate improvements in code maintainability and readability.
-
-Steps Involved
-
-     Analyze the current structure of application profiles and permissions.
-     Design a new matrix that optimizes the structure and reduces redundancy.
-     Refactor the existing codebase to align with the new matrix.
-     Test the refactored code to ensure functionality remains intact.
+One of the main tasks was to understand how the Usercube application manages the restrictions within the application configuration and then to fix the known issues. The first step was to analyse in the codebase what was all the configuration elements that was connected with the profiles declaration and then to review the definition of each of these elements in the Usercube documentation \cite{UsercubeDocument}.
 
 
-\subsubsection{Request 67857 - Correcting Anomalies in the Permission Catalog}
-
-This task focuses on correcting anomalies identified in the permission catalog for end users. Addressing these anomalies is crucial for ensuring the proper functioning of the permission system and enhancing overall user experience.
-
-\textbf{Steps Involved:}
-
-     Review and document the identified anomalies.
-     Investigate the root causes of these anomalies.
-     Implement code changes to correct the anomalies.
-     Validate the corrections through extensive testing.
 
 
-\subsection{Implementing Version Control with GIT}
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{profilsAna.png}
+    \caption{Table with definition of profiles}
+    \label{fig:enter-label}
+\end{figure}
 
-The implementation of version control using GIT is a multi-phase process that ensures efficient tracking and management of code changes. This section outlines the steps already accomplished and the phases that are yet to be executed.
+The table was the most important thing to ensure the effective communication with the Team in France responsable for the projetct. Before this unique table with all the profiles next to the other for better comparison we had an excel file with long pages and description wrote by the QA team previously when the profiles were asked in the origin of it. The table was only possible trough understanding the steps of our workflows and what is the true concerning of each profile.
 
-\textbf{Phases Already Accomplished:}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{lcc}
+        \toprule
+        & \textbf{Old Version} & \textbf{New Version} \\
+        \midrule
+        Lines of Code & 4698 & 1807 \\
+        \midrule
+        Entry Elements & 1127 & 350 \\
+        Filter Elements & 1181 & 606 \\
+        AccessControlRule Elements & 616 & 188 \\
+        \quad Related to EntityType="SingleRole" & 52 & 4 \\
+        \quad Related to EntityType="Category" & 54 & 4 \\
+        \quad Related to EntityType="ResourceType" & 51 & 4 \\
+        \bottomrule
+    \end{tabular}
+    \caption{Comparison of Old and New Versions}
+    \label{tab:comparison}
+\end{table}
 
-     Code clean-up in preparation for migration.
-     Repository creation.
-     Script variabilization.
-     AD String mapping.
-     Adaptation of scripts for different environments.
-     Definition of access, extensions, and variabilization.
-     Team training on the new version control system.
+The new version of the code has been significantly reduced, decreasing the total lines of code from 4698 to 1807. This includes a reduction in the number of elements for "entry" from 1127 to 350, "filter" from 1181 to 606, and "AccessControlRule" from 616 to 188. The "AccessControlRule" elements related to "SingleRole," "Category," and "ResourceType" have all been reduced from around 50 each to just 4. This substantial simplification suggests a more efficient and maintainable codebase.
 
+\subsection{Notifications}
 
-\subsection{Automating Deployment with GITLAB}
+The notifications are a very important aspect of the Usercube application since it is the way the managers responsibles for approving the demands of permissions are notified. The Notifications are directly related to the profiles. The application uses the same Entry permission mechanism to attach which profiles are going to be notified depending on the case.
 
-The automation of the deployment process using GITLAB aims to streamline the deployment across various environments. This task involves identifying inefficiencies in the current process and transitioning it from a local environment to a cloud-based one, integrated with a versioning tool.
-
-\textbf{Steps Involved:}
-
-     Document and analyze the current deployment process.
-     Identify and address shortcomings in the current process.
-     Evaluate the feasibility of using native development tools for automation.
-     Transition the deployment process to a cloud-based environment.
-     Integrate the deployment process with the versioning tool.
-
-
-\subsection{Developing New Features and Integrations}
-
-The development of new features and integrations is driven by stakeholder demands, utilizing technologies such as PowerShell, C\#, XML, JSON, and SQL. Below are examples of specific integration requests.
-
-\subsubsection{Request 68123 - Integration of Application L684 SAS Serveur}
-
-This request involves integrating the application L684 SAS Serveur through both manual and AD provisioning.
-
-\textbf{Steps Involved:}
-
-     Analyze the requirements for the integration of L684 SAS Serveur.
-     Develop the necessary scripts for manual and AD provisioning.
-     Test the integration to ensure compatibility and functionality.
+Since the profiles had many problems the team always had a big trouble making sure the right person receive the right notification. Immediatly after deploying the profiles to quality we started digging into the notifications scripts in PowerShell that were created in order to substitute the native ones.
 
 
-\subsubsection{Request 68184 - Integration of Application L716-SIMPLISSIMO}
 
-This request focuses on the manual provisioning of the application L716-SIMPLISSIMO.
+\section{Implementing Version Control with Git}
 
-\textbf{Steps Involved:}
+The process began with the creation of the main production branch. From there, a pre-production branch (PKG-V24S23) was derived, followed by a QA branch (REC-V24S23). These branches ensured that code progressed through stages of preparation and quality assurance before reaching production. Feature and fix branches, such as feat/Mantis-XXXXX and fix/Mantis-YYYYY, were created for specific tasks and issues, allowing focused development and bug fixing. These branches were periodically merged back into the QA branch and pre-production branch, ensuring continuous integration and testing. Eventually, all changes were merged into the main production branch, culminating in stable release tags like V24S23 and V24S27. This structured approach promoted organized development, thorough testing, and smooth integration of new features and fixes.
 
-     Gather requirements for the integration of L716-SIMPLISSIMO.
-     Develop and implement manual provisioning scripts.
-     Validate the integration through rigorous testing.
-
-
-\subsubsection{Request 68360 - Integration of Application L099A-Tables START}
-
-This task involves the manual provisioning of the application L099A-Tables START.
-
-\textbf{Steps Involved:}
-
-     Identify the requirements for the integration of L099A-Tables START.
-     Create and execute manual provisioning scripts.
-     Conduct testing to ensure the integration meets all specified requirements.
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{GitDiagram.png}
+    \caption{Git Branching Diagram}
+    \label{fig:git-diagram}
+\end{figure}
 
 
+
+Version control is indispensable for managing collaborative software development. Our phased approach to implementing Git involved preparatory activities such as code cleanup and repository setup. Further steps included script variabilization and adaptation for diverse environments, culminating in team training to foster proficient utilization of the version control system.
+
+\section{Integrations and New Features}
+
+Specific integration: L684 SAS Serveur, L716-SIMPLISSIMO, and L099A-Tables START. 
 

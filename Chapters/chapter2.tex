@@ -13,124 +13,56 @@
 
 \prependtographicspath{{Chapters/Figures/Covers/}}
 
-This chapter is divided into several sections. The first one gives an introduction to...
-
-
 \section{Software Quality}
-\cite{MetricsMaintainability1994}
+
+Quality characteristics are specific properties of software, such as correctness, robustness, readability, and evolvability, which can be measured. The primary difficulty in improving software quality is not the applicability of a series of good practices but the very foundation that changes with the incorporation of quality from the inception itself in development rather than just depending on testing at the end of development.
+
+\subsection{Understanding Dimensions of Software Quality}
+
+Software quality is multi-dimensional and predominantly project-specific, based on individual needs and contexts. The diverse dimensions include:
+
+\begin{enumerate}
+    \item \textbf{Correctness:} This refers to the software performing its intended job accurately without errors.
+
+    \item \textbf{Robustness:} The software's quality for acting many unintended occurrences without failing. Readability: Code that is easily readable by new developers, which improves maintainability.
+
+    \item \textbf{Evolvability:} The ease with which software can be changed to accommodate new requirements or environments.
+\end{enumerate}
+
+Each dimension contributes its unique qualities to the overall software, leading to its long-term success and reliability.
+
+\subsection{Maintenance: The Solution, Not a Problem}
+
+Glass challenges the traditional view that software maintenance is a problem to be minimized. He thinks it should be treated as a positive part of the software lifecycle.
+
+The inherent software flexibility and the nature of maintenance activities: Glass assumes that maintenance is related to enhancements and new functionality added, rather than just error fixing, which is only a small part of maintenance efforts. This represents the adaptive and evolutionary nature of software, such that maintenance activities are put in place to ensure continuous improvement and software refinement based on users' changing needs and technology advances. Integrating Quality into Development Quality software development must be incorporated into the software development life cycle to safeguard against issues after deployment, and ensure maintenance costs are not inflated. Testing software continuously from its early initialization is a sure way of capturing a defect at such an early stage. It can be fixed without more cost and effort that would result in later fixing. Adopt practices for quality improvement during development through reviews, continuous integration, etc.
+
+
+
 \cite{ManagingMaintenance1983}
-\cite{lientz1980software}
-\cite{MaintenanceGlass1998}
+ \cite{MaintenanceGlass1998}
+    \cite{lientz1980software}
+    \cite{MetricsMaintainability1994}
+    \cite{osterweil1996strategic}
 
-\section{Software Quality}
-
-The concept of software quality encompasses multiple dimensions, primarily revolving around the maintainability, reliability, and overall performance of software systems throughout their lifecycle. This section delves into these aspects, informed by notable works in the field, and aims to elucidate the critical role of maintenance and the evolving understanding of software quality.
-
-\subsection{The Role of Maintenance in Software Quality}
-
-Historically, the literature has underscored the importance of investing resources during the initial development phase to enhance the maintainability of software applications. The assumption underlying this approach is that application programs will have a long lifespan, during which maintenance costs will constitute a significant portion of the total costs. According to Lientz and Swanson (1980), maintenance expenditures can range from 40 to 75 of the total application program costs, highlighting the economic significance of these activities . Maintenance costs, as defined by these authors, encompass expenses incurred post-deployment to correct errors, expand functionality, and optimize execution.
-
-Despite extensive research and the development of numerous methodologies to mitigate maintenance costs, this area remains a substantial concern for management information systems (MIS) practitioners. Braddock (1983) and Boehm (1994) offer comprehensive recommendations covering organizational, administrative, and technical strategies to address this issue  . Nevertheless, the persistent challenge of high maintenance costs suggests a need for continuous refinement of these strategies and a deeper understanding of their practical applications.
-
-\subsection{Reframing Maintenance: A Solution, Not a Problem}
-
-Glass (1998) challenges the traditional view that software maintenance is merely a problem to be minimized. Instead, he argues that maintenance should be seen as an inherent and beneficial aspect of the software lifecycle. This perspective hinges on two critical insights: software's inherent flexibility and the nature of maintenance activities. Glass posits that the majority of maintenance work (around 60) is focused on enhancements and adding new functionality, rather than merely fixing errors, which constitutes only 17 of maintenance efforts . This highlights the adaptive and evolutionary nature of software, positioning maintenance as a means to continually improve and refine software systems in response to changing user needs and technological advancements.
-
-Furthermore, research by Dekleva (1992) supports this view by demonstrating that systems built with modern development methodologies, such as structured methods and CASE tools, tend to incur higher maintenance costs. However, these costs are associated with the systems' improved maintainability and ease of enhancement. Dekleva’s study found that while initial maintenance costs might be lower for well-built systems, they increase over time as users identify new requirements and the system evolves to meet these needs . This reinforces the idea that maintenance is not merely a cost to be minimized but an essential process for sustaining and enhancing software quality over time.
-
-\subsection{Strategies for Effective Maintenance Management}
-
-Effective management of software maintenance is crucial for sustaining software quality and reducing long-term costs. The literature offers various strategies to achieve this, focusing on both technical and organizational aspects. From a technical perspective, Boehm (1994) suggests rigorous documentation, modular design, and adherence to coding standards to simplify future maintenance efforts. Organizational strategies, as highlighted by Braddock (1983), include establishing clear maintenance processes, regular training for maintenance personnel, and fostering a culture that values continuous improvement and proactive problem-solving  .
-
-The synthesis of these perspectives indicates that maintaining high software quality requires a holistic approach, integrating both technical rigor and effective organizational practices. By viewing maintenance as a continuous, value-adding process rather than a mere expense, organizations can better allocate resources and cultivate a development environment that supports sustainable software evolution.
-
-In conclusion, the insights from these seminal works underscore the multifaceted nature of software quality and the pivotal role of maintenance. As software systems become increasingly integral to organizational operations, understanding and implementing effective maintenance strategies will be key to ensuring their long-term success and reliability.
     
+\subsection{Lehman’s Laws of Software Evolution}
 
+Lehman’s Laws of Software Evolution provide insights into the behavior and progression of software over time. Meir M. Lehman and Les Belady formulated these laws based on extensive analysis of industrial engineering projects.
 
-\section{Lehman’s Laws of Software Evolution}
+Continual Change: E-type programs, which are systems embedded in the real world, must continuously adapt to remain functional and satisfactory due to changes in their operational environment. This necessity arises from the natural mismatch between the software's state and its evolving context, not from errors or shortcuts by the engineering team \cite{Lehman1996Laws}. This constant adaptation is driven by the need for feedback and changes in the software's environment, making E-type software similar to biological organisms that must evolve to cope with environmental pressures \cite{LehmanLaws1980}.
 
-\cite{LehmanLaws1980}
-\cite{Lehman1978ProgramsCS}
-\cite{Lehman1996Laws}
+Increasing Complexity: Over time, software systems inherently become more complex unless continuous efforts are made to control and reduce this complexity. This phenomenon is akin to the second law of thermodynamics, where entropy in a closed system continuously increases. As software evolves to meet new requirements or fix bugs, interaction points within the system increase, adding to its complexity. If unmanaged, this growing complexity makes maintenance and further development increasingly difficult. Balancing the introduction of new features with complexity management is crucial, though resources for both are limited. Consequently, the rate of growth of a system typically slows as it ages \cite{Lehman1978ProgramsCS}.
 
+\section{Identity Governance and Administration}
 
-Lehman’s Laws of Software Evolution present a framework for understanding the dynamics of software systems over time. These laws, formulated by Meir M. Lehman and Les Belady, are based on empirical studies of industrial software systems and their development processes. Below, we extract and paraphrase key information from notable sources to present a comprehensive understanding of Lehman's laws in a structured format.
+Identity Governance and Administration (IGA) is crucial in IT operations for managing user identities and access. IGA combines Identity Governance, which focuses on visibility, role management, and attestation, with Identity Administration, which manages user accounts, credentials, and provisioning. IGA ensures secure IT operations, reduces unauthorized access risks, and automates processes for efficiency and compliance.
 
-\subsection{Continuing Change}
+The primary purpose of IGA is to create a secure IT environment by managing and controlling user access, enhancing data integrity and confidentiality, and preventing misuse. IGA also improves operational efficiency through automation and compliance with regulations.
 
-E-type programs, which are systems embedded in the real world and subject to continuous operation, must be perpetually adapted to remain functional and satisfactory. The need for this continual change arises from the mismatch that develops between the software and its evolving operational environment. Over time, as the software is used and the environment in which it operates changes, feedback pressures necessitate adaptation. This process of constant adaptation ensures that the software does not become obsolete. The dynamics of E-type software are akin to biological organisms, requiring continuous evolution to cope with external pressures and changing conditions. 
+Key components of IGA include Identity Lifecycle Management, which handles access rights throughout a user's lifecycle, Access Governance, which enforces access policies, Access Administration, which manages access requests and reviews, and Role-Based Access Control, which assigns roles based on job responsibilities. Policy Enforcement and Compliance ensure adherence to security regulations.
 
-\subsection{Increasing Complexity}
-
-As software evolves, its complexity tends to increase unless deliberate efforts are made to manage and reduce it. This phenomenon can be likened to the second law of thermodynamics, where entropy in a closed system increases over time. In the context of software, as changes are successively implemented to adapt to new requirements or correct issues, the interactions and dependencies among system components grow, leading to increased complexity. If this complexity is not managed, maintaining and further developing the software becomes increasingly challenging. Balancing efforts between progressive changes (adding new features) and anti-regressive activities (complexity management) is crucial, though resources for both are always limited. Consequently, the rate of system growth tends to decline as the system ages.
-
-\subsection{Self-Regulation and Feedback}
-
-The process of software evolution is inherently self-regulating, characterized by feedback mechanisms that stabilize and guide the development trajectory. In industrial environments, software evolution is driven by a technical team within a larger organizational framework, where managerial and operational rules create checks and balances. These feedback loops ensure that the evolution process remains stable and controlled, with attributes of the product and process exhibiting near-normal distribution. The multi-loop, multi-level feedback system that constitutes E-type software evolution incorporates a range of managerial and implementation decisions, resulting in a self-stabilizing growth pattern. Understanding and leveraging these feedback mechanisms is essential for effectively managing software evolution and improving the system.
-
-
-
-\section{Identity Governance and Administration (IGA)}
-\label{sec:IGA}
-
-Identity Governance and Administration (IGA) is a cornerstone of modern IT operations, providing a framework for organizations to manage user identities and access throughout the enterprise. This system is a blend of two vital components: Identity Governance and Identity Administration.
-
-Identity Governance is primarily concerned with visibility, offering valuable insights into user identities and their access privileges. It also emphasizes the segregation of duties, a crucial aspect that ensures roles with potential conflicts are separated to avoid misuse. This component also involves role management, which is the process of defining and assigning roles to streamline access control. Another key aspect of Identity Governance is attestation, which involves the regular review and validation of access rights. Lastly, it leverages analytics and reporting, utilizing data to make informed decisions.
-
-On the other hand, Identity Administration is more focused on the management of user accounts and their attributes, a process known as account administration. It also handles credentials administration, which involves managing passwords, tokens, and other factors used for authentication. A significant part of Identity Administration is user and device provisioning, which automates user access throughout their lifecycle. Lastly, it manages entitlements, controlling permissions and authorizations.
-
-In essence, IGA is a comprehensive system that integrates various aspects of identity and access management, ensuring efficient and secure IT operations within an organization. It is a pivotal element in the modern IT landscape, enabling organizations to effectively manage and control user access across the enterprise.
-
-
-\subsection{Purpose}
-
-
-The primary purpose of Identity Governance and Administration (IGA) is to establish a robust and secure IT environment within an organization. It aims to effectively manage and control user identities and access, thereby reducing the risk of unauthorized access and potential security breaches.
-
-IGA serves as a proactive measure, ensuring that only authorized individuals have access to the necessary resources, thus maintaining the integrity and confidentiality of the organization’s data. By providing visibility into user identities and their access privileges, it allows organizations to detect and prevent potential misuse of access rights.
-
-Furthermore, IGA streamlines IT operations by automating various processes such as user and device provisioning, account administration, and managing entitlements. This not only enhances operational efficiency but also ensures compliance with regulatory requirements.
-
-\subsection{Components of IGA}
-
-
-The components of Identity Governance and Administration (IGA) encompass several key areas that work together to ensure secure and efficient IT operations within an organization.
-
-One of the primary components is Identity Lifecycle Management, which covers the provisioning, deprovisioning, and modification of access rights throughout an individual's lifecycle within an organization. This process ensures that users have the appropriate access rights at all times, from their onboarding to their eventual exit from the organization.
-
-Access Governance is another crucial component that focuses on defining and enforcing policies related to access control, segregation of duties, and entitlement management. It plays a vital role in preventing unauthorized access and potential security breaches.
-
-Access Administration involves managing user access requests, approvals, and access reviews. It ensures that only authorized individuals have access to the necessary resources, thereby maintaining the integrity and confidentiality of the organization's data.
-
-Role-Based Access Control (RBAC) is a method that defines and assigns roles to users based on their job responsibilities. It simplifies the process of managing user access by grouping users with similar job functions and assigning them the same access rights.
-
-Lastly, Policy Enforcement and Compliance ensures adherence to security policies and regulations such as the General Data Protection Regulation (GDPR), and audit requirements. This component ensures that the organization remains compliant with all relevant laws and regulations, thereby reducing the risk of penalties and reputational damage.
-
-\subsection{Challenges and Considerations}
-
-
-Implementing Identity Governance and Administration (IGA) comes with its own set of challenges and considerations. One of the primary challenges is the complexity of IGA implementations. Given the diverse user populations, applications, and data sources within an organization, implementing IGA can be a complex task.
-
-Another significant challenge is integration. Integrating IGA with existing systems and applications can be a daunting task, requiring careful planning and execution. It’s crucial to ensure that the IGA system works seamlessly with other systems to provide effective identity governance and administration.
-
-Scalability is another important consideration. As organizations grow and evolve, their IGA systems must be able to scale accordingly. This means that the IGA system should be capable of handling an increasing number of users, applications, and data sources without compromising performance or security.
-
-Lastly, user experience is a vital consideration. While it’s essential to maintain robust security measures, it’s equally important to ensure a positive user experience. This involves balancing the need for stringent security controls with the need for user-friendly interfaces and processes.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Implementing IGA poses challenges like complexity, integration with existing systems, scalability to accommodate growth, and maintaining a balance between security measures and user experience. Effective IGA implementation requires careful planning to address these challenges.
 
 
 \section{Netwrix Usercube}
@@ -138,22 +70,19 @@ Lastly, user experience is a vital consideration. While it’s essential to main
 
 How is usercube configuration code related to object oriented code?
 
-Netwrix Usercube is a product that is now part of Netwrix. It is a comprehensive identity and access management solution. Netwrix Usercube enables organizations of all sizes to enhance their security and compliance posture by ensuring that access permissions are granted only to those who need them. It can automate onboarding and offboarding processes, easing the compliance burden.
+Netwrix Usercube is a product that is now part of Netwrix. It is a comprehensive identity and access management solution. Netwrix Usercube enables organizations of all sizes to enhance their security and compliance posture by ensuring that access permissions are granted only to those who need them. It can automate onboarding and offboarding processes, easing the compliance burden.  
 
 The application is better described dividing it in two modules that work together: Identity and Entitlement Management:
 
 \subsection{Identity Management}
 
+A company deals with various identities, including employees and external workers like contractors, who are usually only tracked for billing. It also involves bots and software. All identities requiring work-related entitlements must be represented.
 
-A company involves many sorts of identities: obviously employees, but also external workers like contractors who are usually not tracked in the company's systems except for billing purposes, bots, softwares, etc. All identity types that need to be assigned entitlements to work within the company must be represented.
+Typically, companies use a separate system for each identity type. Usercube consolidates information from multiple source systems to create a central repository that manages all identities throughout their lifecycle.
 
-Companies often use about one system for each identity type. Usercube capitalizes on information from several source systems in order to build a central repository meant to contain all the data necessary to manage all identities throughout their whole lifecycle.
+Usercube's repository serves as a mediator between data-providing systems, such as HR systems, and data-receiving systems, like Active Directory. This simplifies the connections between systems.
 
-Usercube's central repository acts as an intermediary between the systems that provide data, for example the HR system, and those that receive data, for example the Active Directory. This greatly reduces the complexity in the links between all systems.
-
-Without an intermediary, adding one system to a set of n systems requires up to n sets of rules, one for each reading/writing relationship that this system has with the others. The complexity is quadratic.
-
-Now with the central repository as an intermediary, implementing a new system requires only one more set of rules. The complexity becomes linear \cite{UsercubeDocument}.
+Without an intermediary, adding a new system to n systems requires n sets of rules, resulting in quadratic complexity. With the central repository, adding a new system needs only one additional set of rules, making the complexity linear \cite{UsercubeDocument}.
 
 \begin{figure}[htbp]
   \centering
@@ -172,30 +101,11 @@ Now with the central repository as an intermediary, implementing a new system re
 
 \subsection{Entitlement Management}
 
+Entitlement Management involves assigning entitlements to identities, which are permissions allowing access to specific data or locations. In systems like Active Directory, entitlements often manifest as group memberships. Usercube is a tool designed to manage these entitlements by creating a comprehensive catalog and ensuring correct assignments based on a role model that includes governance data and risk definitions.
 
-The process of managing identities’ entitlements is a complex task that necessitates the meticulous assignment of entitlements to identities. This task is particularly important in the context of a role model, which is a subset of a policy that includes governance data such as risk definition. The role model is designed to manage entitlements across all managed systems and establish rules that initiate the assignment of these entitlements to identities.
+In Usercube, entitlements are represented as roles within a role catalog that lists all entitlements from managed systems. These roles are linked to specific provisioning rules that write the actual entitlements to the systems, automating the assignment process. For example, to assign an Active Directory entitlement, a rule might add a user to a particular group when a role is assigned. Assignment rules in Usercube automatically assign roles to users based on criteria like job title and location, ensuring compliance and marking unsupported assignments as non-conforming.
 
-Entitlements in a managed system can take on various forms. They serve as permissions for identities to access specific data on a system or a physical location. For instance, in the Active Directory, entitlements are typically group memberships. To have administrator rights in the Iris application, a user must be a member of the group SGAPPIT/Development/Iris/Administrator.
-
-Usercube is a tool specifically designed to help create a comprehensive and reliable catalog of the entitlements available in the managed systems. It ensures that the appropriate entitlements are assigned to the correct users. The role model in Usercube encompasses the entitlements, represented as roles, for all managed systems. It also includes rules that manage the systems’ resources and initiate the assignment of entitlements to identities.
-
-The role model is part of a broader policy that also includes governance data such as risk definition. This allows for the implementation of distinct behaviors through distinct policies at a higher level.
-
-Usercube represents IGA-related access right mechanisms through a role-based model. The role catalog aims to contain a comprehensive list of entitlements from all managed systems. Each entitlement is modeled by a role, and NETWRIX recommends creating a single role for each entitlement with a name that is more functional than technical for easy understanding.
-
-Roles alone are not sufficient to provide identities with the systems’ technical entitlements. Rules are needed for Usercube to write users’ entitlements in the managed systems. These rules are used to automatically assign roles to users and categorize users and accounts.
-
-Provisioning rules are a specific type of rule in Usercube. They write the actual entitlements to the managed systems, often based on users’ roles. For example, to give an AD entitlement to a user, a rule is needed that adds the user to the member list of a specific AD group when a specific role is assigned to them. Even when a role is manually assigned, provisioning rules determine which account and permission groups are given as entitlements.
-
-While the role catalog and provisioning rules are together enough to manually give users their access rights, we often want Usercube to do this automatically. Assignment rules automatically assign roles to identities based on specific criteria. For example, we can choose to assign the role Benefits Manager - FR to any user whose job title is benefits manager and whose location is in France.
-
-Once all assignment rules are created, Usercube is able to spot existing assignments that are not supported by any rule, marking them as non-conforming.
-
-Usercube’s assignment rules include single role rules and composite role rules to assign single and composite roles, and resource type rules to assign accounts.
-
-Different resources can be managed through different rules, by being part of different resource types. A resource type is a group of resources that have the same IGA-related purposes. Categorization rules categorize resources into resource types and link identities to the accounts they own.
-
-For example, we might need to differentiate AD’s standard accounts from administration accounts. This way, we can configure different email addresses for privileged accounts, for example adm.john.smith@contoso.com. We can also add more approval steps in the workflows related to privileged accounts, for more security than for standard accounts.
+Usercube manages different resources through categorized rules, distinguishing between resource types such as standard and administration accounts. This categorization allows for differentiated management, such as setting distinct email addresses and approval workflows for privileged accounts, enhancing security.
 
 \begin{figure}[htbp]
   \centering
@@ -204,10 +114,7 @@ For example, we might need to differentiate AD’s standard accounts from admini
   \label{fig:Entitlements_RoleModel}
 \end{figure}
 
-
-
 \subsection{Architecture}
-
 
 Usercube works via a server which operates computation, stores all application data in the database, and serves a web User Interface; at least one agent which operates data flows to/from the managed systems. The managed systems' credentials are used only by the agent and are never disclosed to the server. The agent can call the server, but the server cannot call the agent. The data flows' initiatives are always from the agent. In our case the installation is on-premises so that the server is installed on an isolated network within the company.
 
