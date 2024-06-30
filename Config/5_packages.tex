@@ -31,9 +31,39 @@
 % \usepackage{algorithm2e}
 % \RestyleAlgo{ruled}
 
-% \usepackage{minted}    % Fontification of source code listings
+%\usepackage{minted}    % Fontification of source code listings
 
-% \usepackage{listings}    % Fontification of source code listingsConfig/5_packages.tex
+%\usepackage{xcolor} % to access the named colour LightGray
+%\definecolor{LightGray}{gray}{0.9}
+
+\usepackage{listings}    % Fontification of source code listingsConfig/5_packages.tex
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
 %                          % In alternative, use the package “minted” (highly recomended)
 
 % \lstset{

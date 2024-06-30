@@ -15,52 +15,37 @@
 
 \section{Context and Motivation}
     
-KLx Employee Management System, AnA: This is among the most important tools for the automation of the IGA process, which takes in more than 5000 employees of the Credit Agricole group. Netwrix developed this on-premises solution. End users are the users at the CA Leasing and Factoring branch who acquired this software in 2018.
+The KLx Employee Management System, AnA, is a tool for the automation of the IGA process, which manages more than 5000 employees from the Credit Agricole group. The software was developed by an external editor named Netwrix and then bought on-premises by the Leasing and Factoring branch of the group. The software's end users are the managers from the global Human Resources team and was deployed to production in 2020.
 
-Since then, the KLx team in Lisbon has worked around the clock to keep configuring the application and upgrading it to meet the needs and requirements as expressed by the Functional team in France, which, in turn, takes its orders from the human resources department—the end user of this application.
+Since then, the KLx team in Lisbon has worked to maintain the application and upgrading it to meet the needs and requirements that are requested by the Functional team in France, which, in turn, takes its orders from the human resources department.
 
-However, complexity of the system has increased over the integration of different departments of the company into the software and also because of the changes taking place in the environment. This has made it more and more difficult to maintain the system. The work is motivated by a realization that the quality of the code, along with its engineering process, determines the efficiency and effectiveness of the system.
+However, the complexity of the system has increased over time. The integration of more departments into the software and the changes taking place in the environment were aggravating. This made all changes needed more difficult and the cost to maintain the system increases. The work is motivated by a realization that the quality of the code, along with its engineering process, determines the efficiency and effectiveness of the system.
 
-In these situations, the theories and methodologies of Software Quality become essential in software development. The intention is to identify some critical points of improvement in the solution and in the development workflow. By using Software Quality methods, we intend to better quality with productivity being increased as well.
+In these situations, the theories and methodologies of Software Quality becomes essential. The intention is to identify some critical points of improvement in the solution and in the development workflow. By using making use of these methods, we intend to achieve a better software and developing system.
 
 \section{Problem Definition}
 
-The incorporation of numerous departments within the organization, along with the escalating number of applications managed by AnA, has led to a substantial surge in complexity and a corresponding decline in the delivery rate. With all these factors working against it, another factor that has come into play is that rigid deadlines were imposed and the configuration code was received by the team when it was partly developed.
+Besides all the mentioned problems, one thing that marks the codebase is the fact that before the KLx team were created, the objective of the CA was to hire the software editor to do the configuration of the application based on the requirements of the Human Resources. But this was not possible due to the lack of understanding on how the IGA workflow would work, leading to a model misspecification. 
 
-To put it more concretely: at present, the source code consists of about 20,000 lines spread over 200-plus files. It is not maintained under any version control system; manual backups in shared directories are the only solution. This way of doing things has led to mistakes that could have been avoided with the safety and order provided by a version control system.
+Additionally, at the present, the source code consists of about 20,000 lines spread over 200 files that are not maintained under any versioning control system. The codebase and it's backups are stored in shared servers where the different environments of the application runs. This workflow has led to mistakes that could have been avoided with the safety and organisation provided by a good development model.
 
-Besides the versioning, other factors further upstream that have bottlenecked during the delivery process include the way developments are delivered in the various test and production environments. Currently, all the team members share two virtual machines, so an instance of AnA is run with the configuration being tested. This factor causes a severe waste of time.
+More on, a brief review of the source code also revealed some recurrent issues related to the quality of the code, in this case, code duplication. Since there are pretty frequent changes in business, for each change, the time lost in complexity increase every iteration. These, in turn, have introduced several bad engineering practices into the developing system.
 
-Additionally, the source code also reveals some recurrent issues related to the quality of the code, in this case, code duplication. Since there are pretty frequent changes in business, for each such change, there are several copies of those changes that need to be made in corresponding contexts. These, in turn, have introduced several inconsistencies into the system, the overall complexity of which has grown with time.
-
-In general, the challenges our team experiences with versioning control, manual backup, and a slow development process need urgent addressing. The answers to effective solutions will thus not only improve the quality of the code but also streamline the delivery process. In the future, effective ways need to be found to solve these issues and not perturb the codebase into fragility and anarchy.
+The problems our team experiences are related to bad practices an a absence of a Software Quality orientation. Finding and implementing these practices will thus not only improve the quality of the code but also the entire delivery process. In the future, effective ways need to be found to solve these issues.
 
 \section{Main Contributions}
 
-As a committed member of our team, I have embraced pivotal roles within our project that contribute significantly to the enhancement of our software system’s quality, efficiency, and functionality.
+One of my key responsibilities is the analysis of the modules Profiles and Notifications. This involves a deep review of requirements and the creation of alternative representation models to enhance the understanding.
 
-One of my key responsibilities is the detailed refactoring of specific modules in our codebase. This involves the careful identification and resolution of code smells, accomplishing two primary goals:
+I am currently creating a specification of the application profiles and permissions using a new organizational matrix. This significantly helped us to see where code could be factorised during our further developments. Ensuring precise permissions is crucial for maintaining both security and functionality.
 
-To present the two key outcomes of your refactoring efforts in LaTeX format, you could structure your list as follows:
+Additionally, I am enhancing our version control practices by implementing GIT. I have documented this methodology to ensure its effectiveness. Furthermore, I am leading our team through the transition to this new system, ensuring a smooth adoption. Our progress includes phases such as code cleanup, repository setup, script variabilization and training.
 
-\begin{itemize}
-  \item \textbf{Readability:} I enhance the clarity and structure of our code, making it easier to maintain and debug.
-  \item \textbf{Maintainability:} My refactoring minimizes redundancy and optimizes the code structure. This improves the application's current performance and facilitates future maintenance efforts.
-\end{itemize}
-
-For instance, I am currently overhauling the application profiles and permissions using a new organizational matrix. This task significantly decreases code repetition across different classes and tackles quality issues highlighted during our code reviews. Ensuring precise permissions is vital for maintaining both security and functionality.
-
-Moreover, I am advancing our version control practices by implementing GIT. After reviewing various contemporary software development methodologies, I selected the most fitting approach for our team. I have thoroughly documented this methodology to confirm its utility. Additionally, I am guiding our team through this new system, ensuring a seamless transition. Our progress includes phases like code cleanup, repository setup, script variabilization, and staff training.
-
-I am also streamlining the deployment process across different environments using GITLAB. I carefully evaluate the existing deployment strategies to pinpoint any inefficiencies or constraints. By considering the integration of native development tools for smoother deployment, I aim to align this process with our version control tools, thus enhancing the overall quality of development.
-
-In collaboration with stakeholders, I am deeply involved in the development of new features and integrations across various technologies such as PowerShell, C, XML, JSON, and SQL. Upcoming significant projects include integrating the L684 SAS Server application (manual + AD provisioning) and the L716-SIMPLISSIMO application (manual provisioning).
-
+In collaboration with stakeholders, I am actively involved in the development of new features and integrations across various technologies, including PowerShell, C, XML, JSON, and SQL. Upcoming major projects include the integration of the L684 SAS Server application (manual + AD provisioning) and the L716-SIMPLISSIMO application (manual provisioning).
 
 \section{Document Outline}
 
-
-This document is structured into five main sections, each crafted to thoroughly explore the research topic. Below is a brief summary of each section:
+This document is structured into five main sections. Below is a brief summary of each section:
 
 \begin{enumerate}
     \item \textbf{Introduction}: This section introduces the overall theme of the research, explaining its importance and the fundamental objectives that guide the study.

@@ -12,15 +12,13 @@
 \label{cha:Related work}
   
 \prependtographicspath{{Chapters/Figures/Covers/}}
-
-\cite{wake2004refactoring}
-\cite{estructuringArnold1989}
-\cite{articleOpdyke}
-\cite{RefactoringFowler2002}
-\cite{SurveyRefactoring2004}
-\cite{smellsRefactoring2020}
 \cite{30yearsSoftwareRefactoring2020}
-\cite{ManagingMaintenance1983}
+\cite{estructuringArnold1989}
+\cite{SurveyRefactoring2004}
+\cite{RefactoringFowler2002Improving}
+\cite{wake2004refactoringWorkbook}
+\cite{smellsRefactoring2020}
+\cite{ManagingMaintenance1983} %extra
 
 \section{Restructuring and Refactoring}
 
@@ -28,22 +26,15 @@
 
 \subsection{Explanation and Goals}
 
-Software is modified and inevitably evolves, generally increasing in complexity and drifting away from its original design. Such quality degradation makes maintenance necessary for the repair of faults, adaptation to new environments, and addition of functionalities. Methods have to be provided for reducing complexity while improving internal software quality. Restructuring or refactoring is a transformation of code at the same level of abstraction that aims to preserve external behavior in object-oriented development.
-The term "refactoring" was coined by William Opdyke, who defined it as improving a software system's internal structure without changing its external behavior—better facilitating future adaptations and extensions.
-
-\subsection{Effects}
-
-It improves software quality attributes related to extensibility, modularity, and reusability, reduces complexity improves maintainability, and enhances efficiency. They transform the legacy or deteriorated code into a more modular form and support code migration to other languages or paradigms. The refactoring can aid in reducing development time, detecting bugs, reducing technical debt, and reducing the impact that code smells would have on maintainability.
+Software naturally evolves over time, often becoming more complex and deviating from its original design, necessitating maintenance to fix issues, adapt to new environments, and add functionalities. To manage this complexity and improve internal quality, restructuring or refactoring is employed. Refactoring, a term introduced by William Opdyke \cite{articleOpdyke}, involves modifying a software system's internal structure without altering its external behavior. This process enhances extensibility, modularity, reusability, maintainability, and efficiency while reducing complexity and technical debt. Refactoring also facilitates code migration to different languages or paradigms, speeds up development, and helps in bug detection and managing code smells.
 
 \subsection{Methods, Approaches, and Instruments}
 
 Refactoring includes the steps of identifying the points to be improved, defining proper methods, ensuring behavior preservation, applying refactoring, measuring the impact of refactoring on quality enhancement, and lastly, keeping in tandem or consistency with other software artifacts. Several tools take part in these activities in a systematic effort to improve code quality. The research on platforms like GitHub has spotlighted standard practices regarding refactorings—method extraction—and unveiled smell detection and refactoring tools.
 
-\subsection{Challenges and Recommended Approaches}
+\subsection{Challenges}
 
 It is hard for developers to understand refactoring operations based on the intentions of other developers. Modification that does not change any functionality is always hard to explain. However, refactoring is one of the essential future developments, particularly for long-lived software developed by many different developers. Some studies show an understanding of the motivations behind code changes or the introduction and removal of code smells; hence, it calls for best practices to maximize the benefit affirmed by refactoring. Challenges and Best Practices Software maintenance accounts for a large portion of the costs associated with software. These activities include fault repair, adaptation to various environments, and modification of functionalities. Some factors that hinder easy maintenance include unhelpful documentation, where complex source code is the only primary reliable information source. Common pitfalls, anti-patterns, and code smells are some negative factors impacting maintainability. Refactoring is such that it is principal to removing code smells and improving its quality; however, it is not easy to detect smells and apply the appropriate refactorings. Automated support for the same is hence critical.
-
-
 
 \section{Reverse Engineering}
 
@@ -64,7 +55,7 @@ Reverse Engineering: This is the opposite of forward engineering since it decons
 
 Subareas of Reverse Engineering \cite{ReverseEngineering2011}: 
 \begin{itemize}
-  \item \textbf{Redocumentation:} It generates semantically equivalent documentation of a system by pretty printers and crossreference listings.
+  \item \textbf{Re-documentation:} It generates semantically equivalent documentation of a system by pretty printers and crossreference listings.
   
   \item \textbf{Design Recovery:} A process for re-creating higher-level abstraction using external information and domain knowledge.
   
@@ -77,28 +68,18 @@ Reverse engineering is an essential means of software system analysis and improv
 
 \section{Reengineering}
 
-Reengineering is a comprehensive approach to examining and transforming software systems to meet new requirements or improve functionality and maintainability. It involves more extensive changes than refactoring or restructuring, often addressing broader aspects of the system, including its architecture and design principles.
+Reengineering involves a comprehensive overhaul of software systems to meet new requirements or improve functionality and maintainability, extending beyond refactoring or restructuring by addressing broader aspects like architecture and design principles.
 
 \subsection{Reengineering Patterns}
 
-Reengineering patterns provide structured methodologies to address common challenges in reengineering projects, encapsulating expert knowledge and proven practices. These patterns are context-specific and documented using a template that includes the problem context, solution, forces and trade-offs, examples, known uses, and related patterns. This helps engineers manage complex reengineering tasks by breaking them down into more manageable parts.
+Reengineering patterns provide structured methodologies to tackle common challenges in such projects. These patterns are documented with details like problem context, solution, and trade-offs, helping engineers manage complex tasks by breaking them into manageable parts. Unlike refactoring, which improves code structure without altering behavior, reengineering involves substantial changes to align with new requirements. Reengineering patterns offer strategies for significant system transformation.
 
-\subsection{Refactoring and Reengineering Patterns}
+Patterns are organized into systems or languages. A pattern system addresses various aspects of a problem, while a pattern language integrates patterns for a comprehensive solution. Challenges in reengineering patterns include the lack of documented experiences, scarcity of recognized experts, and the absence of explicit forces and trade-offs, which hinders pattern validation.
 
-Refactoring focuses on improving code structure without altering external behavior, while reengineering involves significant changes to align the system with new requirements. Refactoring patterns provide incremental improvement techniques, whereas reengineering patterns offer strategies for comprehensive system transformation. For example, the "Speculate About Design" pattern involves creating and validating high-level design models against existing code.
-
-\subsection{Pattern Systems and Languages}
-
-Reengineering patterns are organized into systems or languages. A pattern system is a collection of related patterns addressing different aspects of a problem, while a pattern language integrates patterns to achieve a comprehensive solution. For instance, a pattern system for legacy code might include introducing unit tests and managing dependencies, while a pattern language like Temporal Details helps manage the evolution of program representations over time.
-
-\subsection{Difficulties in Reengineering Patterns}
-
-Challenges in reengineering patterns include the lack of documented experience reports, scarcity of recognized experts, and the absence of explicitly listed forces and trade-offs. The lack of published reengineering experiences hinders pattern validation, and the field's lower prestige leads to fewer recognized experts. Despite these issues, works by authors like Fowler, Feathers, and Lanza are valuable for their structured approaches and practical solutions.
-
-Leveraging reengineering patterns, systems, and languages helps software engineers manage the complexity of reengineering tasks, transforming legacy systems into robust, modern, and maintainable forms. Addressing the difficulties in reengineering patterns enhances their applicability and effectiveness in real-world scenarios.
+Despite these challenges, works by Fowler, Feathers, and Lanza provide valuable structured approaches and solutions. Utilizing reengineering patterns, systems, and languages helps engineers transform legacy systems into modern, maintainable forms, enhancing their applicability and effectiveness in real-world scenarios.
 
 \cite{SoftwareEvolutionMens2008}
-\cite{RefactoringFowler2002}
+\cite{RefactoringFowler2002Improving}
 
 \cite{DevelopmentModels2010} \cite{ContinuousEngineering2017}.
 

@@ -11,9 +11,6 @@ In this chapter we will discuss all the work already done by now to enhance the 
 
 One of the main tasks was to understand how the Usercube application manages the restrictions within the application configuration and then to fix the known issues. The first step was to analyse in the codebase what was all the configuration elements that was connected with the profiles declaration and then to review the definition of each of these elements in the Usercube documentation \cite{UsercubeDocument}.
 
-
-
-
 \begin{figure}
     \centering
     \includegraphics[width=1\linewidth]{profilsAna.png}
@@ -51,8 +48,6 @@ The notifications are a very important aspect of the Usercube application since 
 
 Since the profiles had many problems the team always had a big trouble making sure the right person receive the right notification. Immediatly after deploying the profiles to quality we started digging into the notifications scripts in PowerShell that were created in order to substitute the native ones.
 
-
-
 \section{Implementing Version Control with Git}
 
 The process began with the creation of the main production branch. From there, a pre-production branch (PKG-V24S23) was derived, followed by a QA branch (REC-V24S23). These branches ensured that code progressed through stages of preparation and quality assurance before reaching production. Feature and fix branches, such as feat/Mantis-XXXXX and fix/Mantis-YYYYY, were created for specific tasks and issues, allowing focused development and bug fixing. These branches were periodically merged back into the QA branch and pre-production branch, ensuring continuous integration and testing. Eventually, all changes were merged into the main production branch, culminating in stable release tags like V24S23 and V24S27. This structured approach promoted organized development, thorough testing, and smooth integration of new features and fixes.
@@ -64,11 +59,7 @@ The process began with the creation of the main production branch. From there, a
     \label{fig:git-diagram}
 \end{figure}
 
-
-
 Version control is indispensable for managing collaborative software development. Our phased approach to implementing Git involved preparatory activities such as code cleanup and repository setup. Further steps included script variabilization and adaptation for diverse environments, culminating in team training to foster proficient utilization of the version control system.
 
 \section{Integrations and New Features}
-
-Specific integration: L684 SAS Serveur, L716-SIMPLISSIMO, and L099A-Tables START. 
-
+Mantis de recette, ORP WEB, Tables START, SIMPLISSIMO and SAS Serveur
