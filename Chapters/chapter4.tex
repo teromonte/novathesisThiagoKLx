@@ -1,15 +1,25 @@
 \typeout{NT FILE chapter4.tex}%
 
-\chapter{Preliminary Work}
-\label{Preliminary Work}
+\chapter{Work Done}
+\label{Work Done}
 
 In this chapter we will discuss all the work already done by now to enhance the software quality of the application.
+
+\section{Main Contributions}
+
+One of my key responsibilities is the analysis of the modules Profiles and Notifications. This involves a deep review of requirements and the creation of alternative representation models to enhance the understanding.
+
+I am currently creating a specification of the application profiles and permissions using a new organizational matrix. This significantly helped us to see where code could be factorised during our further developments. Ensuring precise permissions is crucial for maintaining both security and functionality.
+
+Additionally, I am enhancing our version control practices by implementing GIT. I have documented this methodology to ensure its effectiveness. Furthermore, I am leading our team through the transition to this new system, ensuring a smooth adoption. Our progress includes phases such as code cleanup, repository setup, script variabilization and training.
+
+In collaboration with stakeholders, I am actively involved in the development of new features and integrations across various technologies, including PowerShell, C, XML, JSON, and SQL. Upcoming major projects include the integration of the L684 SAS Server application (manual + AD provisioning) and the L716-SIMPLISSIMO application (manual provisioning).
 
 \section{Refactoring the Codebase}
 
 \subsection{Application Profiles}
 
-One of the main tasks was to understand how the Usercube application manages the restrictions within the application configuration and then to fix the known issues. The first step was to analyse in the codebase what was all the configuration elements that was connected with the profiles declaration and then to review the definition of each of these elements in the Usercube documentation \cite{UsercubeDocument}.
+One of the main tasks was to understand how the Usercube application manages the restrictions within the application configuration and then to fix the known issues. The first step was to analyse in the codebase what was all the configuration elements that was connected with the profiles declaration and then to review the definition of each of these elements in the Usercube documentation ~\cite{UsercubeDocument}.
 
 \begin{figure}
     \centering
@@ -62,4 +72,9 @@ The process began with the creation of the main production branch. From there, a
 Version control is indispensable for managing collaborative software development. Our phased approach to implementing Git involved preparatory activities such as code cleanup and repository setup. Further steps included script variabilization and adaptation for diverse environments, culminating in team training to foster proficient utilization of the version control system.
 
 \section{Integrations and New Features}
-Mantis de recette, ORP WEB, Tables START, SIMPLISSIMO and SAS Serveur
+
+The applications Mantis de recette, ORP WEB, Tables START, SIMPLISSIMO and SAS Serveur were integrated into AnA and are now managed by the system. 
+
+Integrating a new application consists in connecting a system, automatically via Active Direchetorie or manually via csv files. Newer applications that are alreading doing the authorization via AD can be fully automated by usercube, older one depends on keeping track of 2 csv files: one that mantaings a record of all the roles possible for the application and another containing the attribuition of these roles.
+
+The integration is done by adding the references of the application to be integrated in the xml code using the elements designed to create connectors. Connectors are how these connections are called.

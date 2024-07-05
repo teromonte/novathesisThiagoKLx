@@ -15,37 +15,27 @@
 
 \section{Software Quality}
 
-Quality characteristics are specific properties of software, such as correctness, robustness, readability, and evolvability, which can be measured \cite{MetricsMaintainability1994}. The primary difficulty in improving software quality is not the applicability of a series of good practices but the very foundation that changes with the incorporation of quality from the inception itself in development rather than just depending on testing at the end of development \cite{lientz1980software}.
+Quality characteristics are specific properties of software, such as correctness, robustness, readability, and evolvability, which can be measured ~\cite{MetricsMaintainability1994}. The primary difficulty in improving software quality is not the applicability of a series of good practices but the very foundation that changes with the incorporation of quality from the inception itself in development rather than just depending on testing at the end of development ~\cite{lientz1980software}.
 
-\subsection{Understanding Dimensions of Software Quality}
+\subsection{Dimensions of Software Quality}
 
-Software quality is multi-dimensional and predominantly project-specific, based on individual needs and contexts \cite{MetricsMaintainability1994}. The diverse dimensions include:
+The quality of software is intrinsically multi-dimensional and very project-specific. Individual projects are differently conditioned, so their needs and contexts share dimensions like correctness, which ensures that the software does what it is supposed to do precisely without failure; robustness is an equally important dimension, for it measures the software's capability to hold unexpected events without failure ~\cite{MetricsMaintainability1994} ~\cite{NeriSoftwareQuality2020}.
 
-\begin{itemize}
-    \item \textbf{Correctness:} This refers to the software performing its intended job accurately without errors.
-    
-    \item \textbf{Robustness:} The software's quality for acting many unintended occurrences without failing. 
-    
-    \item \textbf{Readability:} Code that is easily readable by new developers, which improves maintainability.
-
-    \item \textbf{Evolvability:} The ease with which software can be changed to accommodate new requirements or environments.
-\end{itemize}
-
-Each dimension contributes its unique qualities to the overall software, leading to its long-term success and reliability.
+Additionally, readability is essential in that the code is clear and understandable, hence ease of understanding to new developers, which improves maintainability. Another dimension is highly critical, evolvability, meaning the ease with which the software can be altered if new requirements have to be added or deployed in a new environment ~\cite{NeriSoftwareQuality2020}. Following such dimensions individually contributes to the quality of the software; hence, they have a bearing on its long-term success or reliability.
 
 \subsection{Maintenance: The Solution, Not a Problem}
 
-Glass challenges the traditional view that software maintenance is a problem to be minimized therefore not setting it as a priority. Instead, it should be treated as a positive part of the software lifecycle. \cite{MaintenanceGlass1998}. Glass assumes that maintenance is related to enhancements and new functionality added, rather than just error fixing, which is only a small part of maintenance efforts \cite{MaintenanceGlass1998}.
+Glass challenges the traditional view that software maintenance is a problem to be minimized therefore not setting it as a priority. Instead, it should be treated as a positive part of the software lifecycle. ~\cite{MaintenanceGlass1998}. Glass assumes that maintenance is related to enhancements and new functionality added, rather than just error fixing, which is only a small part of maintenance efforts ~\cite{MaintenanceGlass1998}.
 
-This represents the adaptive and evolutionary nature of software, such that maintenance activities are put in place to ensure continuous improvement and software refinement based on users changing needs and technology advances. Integrating Quality into software development must be incorporated it's life cycle to ensure safety against issues after deployment and ensure maintenance costs are not inflated \cite{osterweil1996strategic} \cite{ManagingMaintenance1983}.
+This represents the adaptive and evolutionary nature of software, such that maintenance activities are put in place to ensure continuous improvement and software refinement based on users changing needs and technology advances. Integrating Quality into software development must be incorporated it's life cycle to ensure safety against issues after deployment and ensure maintenance costs are not inflated ~\cite{osterweil1996strategic} ~\cite{ManagingMaintenance1983}.
     
 \subsection{Lehman’s Laws of Software Evolution}
 
 Lehman’s Laws of Software Evolution provides many insights into the behavior and progression of software over time. Meir M. Lehman and Les Belady formulated these laws based on extensive analysis of industrial engineering projects. We are going to address the two main concerns that most relates to our work:
 
-E-type programs, which are systems that heavily depends on the environment, must continuously adapt to remain functional and satisfactory due to changes in their operational environment. This necessity comes from the cyclical disharmony between the software's present state and its evolving context and not from errors or shortcuts by the engineering team \cite{Lehman1996Laws}. This constant adaptation is driven by the need for feedback and changes in the environment making E-type software similar to biological organisms that must evolve to cope with environmental forces \cite{LehmanLaws1980}.
+E-type programs, which are systems that heavily depends on the environment, must continuously adapt to remain functional and satisfactory due to changes in their operational environment. This necessity comes from the cyclical disharmony between the software's present state and its evolving context and not from errors or shortcuts by the engineering team ~\cite{Lehman1996Laws}. This constant adaptation is driven by the need for feedback and changes in the environment making E-type software similar to biological organisms that must evolve to cope with environmental forces ~\cite{LehmanLaws1980}.
 
-Over time, software systems inherently become more complex unless continuous efforts are made to control and reduce this complexity. This phenomenon is related to the second law of thermodynamics, where entropy in a closed system continuously increases and every new interaction point within the system increase caused to meet new requirements or fix bugs, the complexity increases \cite{Lehman1996Laws}. If unmanaged, this growing complexity makes maintenance and further development increasingly difficult. Balancing the introduction of new features with complexity management is crucial, though resources for both are limited. Consequently, the rate of growth of a system typically slows as it ages \cite{Lehman1978ProgramsCS}.
+Over time, software systems inherently become more complex unless continuous efforts are made to control and reduce this complexity. This phenomenon is related to the second law of thermodynamics, where entropy in a closed system continuously increases and every new interaction point within the system increase caused to meet new requirements or fix bugs, the complexity increases ~\cite{Lehman1996Laws}. If unmanaged, this growing complexity makes maintenance and further development increasingly difficult. Balancing the introduction of new features with complexity management is crucial, though resources for both are limited. Consequently, the rate of growth of a system typically slows as it ages ~\cite{Lehman1978ProgramsCS}.
 
 
 
@@ -80,13 +70,13 @@ A company deals with various identities, including employees and external worker
   \end{minipage}
 \end{figure}
 
-As we can see in the representation, with a central repository, adding a new system needs only one additional set of rules, making the complexity linear but without an intermediary, adding a new system to n systems requires n sets of rules, resulting in quadratic complexity \cite{UsercubeDocument}.
+As we can see in the representation, with a central repository, adding a new system needs only one additional set of rules, making the complexity linear but without an intermediary, adding a new system to n systems requires n sets of rules, resulting in quadratic complexity ~\cite{UsercubeDocument}.
 
 \subsection{Entitlement Management}
 
-Entitlement Management involves assigning entitlements to identities, which are permissions allowing access to specific data, location or application. In systems like Active Directory, entitlements often manifest as group memberships. Usercube is a tool designed to manage these entitlements by creating a comprehensive catalog and ensuring correct assignments based on a role model that includes governance data and risk definitions \cite{UsercubeDocument}.
+Entitlement Management involves assigning entitlements to identities, which are permissions allowing access to specific data, location or application. In systems like Active Directory, entitlements often manifest as group memberships. Usercube is a tool designed to manage these entitlements by creating a comprehensive catalog and ensuring correct assignments based on a role model that includes governance data and risk definitions ~\cite{UsercubeDocument}.
 
-In Usercube, entitlements are represented as roles within a role catalog that lists all entitlements from managed systems \cite{UsercubeDocument}. These roles are linked to specific provisioning rules that write the actual entitlements to the systems, automating the assignment process. For example, to assign an Active Directory entitlement, a rule might add a user to a particular group when a role is assigned via the application interface. Assignment rules in Usercube automatically assign roles to users based on criteria like job title and location, ensuring compliance and helping as well flagging incongruent assignments as non-conforming.
+In Usercube, entitlements are represented as roles within a role catalog that lists all entitlements from managed systems ~\cite{UsercubeDocument}. These roles are linked to specific provisioning rules that write the actual entitlements to the systems, automating the assignment process. For example, to assign an Active Directory entitlement, a rule might add a user to a particular group when a role is assigned via the application interface. Assignment rules in Usercube automatically assign roles to users based on criteria like job title and location, ensuring compliance and helping as well flagging incongruent assignments as non-conforming.
 
 Usercube manages different resources through categorized rules, distinguishing between resource types such as standard and administration accounts. This categorization allows for differentiated management, such as setting distinct email addresses and approval workflows for privileged accounts, enhancing security.
 
@@ -104,7 +94,7 @@ Usercube works via a server which operates computation, stores all application d
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=5in]{Architecture_onPrem}
-  \caption{Architecture on premises, adapted \cite{UsercubeDocument}.}
+  \caption{Architecture on premises, adapted ~\cite{UsercubeDocument}.}
   \label{fig:Architecture_onPrem}
 \end{figure}
 
@@ -129,19 +119,19 @@ To illustrate the configuration elements some good examples would be a new Entit
 Another important aspect is for example the assertion elements designed to check if the value of a given property meets a specified condition. It involves defining expressions to validate property values during certain workflow activities, with the capability to handle both single and multi-valued objects. The validation is triggered by the PointCut elements that define in which state of the assertion should be done.
 
 \begin{lstlisting}[language=XML, caption=AssertValueAspect element example to check a date]
-    <AssertValueAspect Identifier="Directory_User_NewInternal_CheckDates" 
-        Binding="Workflow_Directory_User:Directory_User.Records.ContractEndDate" 
-        ExpressionBinding="Workflow_Directory_User:Directory_User.Records"
-        Expression="C#:record: return ( 
-            ((Nullable&lt;DateTime&gt;) record.ContractStartDate).HasValue &&
-            ((Nullable&lt;DateTime&gt;) record.ContractEndDate).HasValue) ?
-            record.ContractStartDate &lt; record.ContractEndDate : true;"
-        Message_L1="Contract's end date must be after contract's start date.">
-        <PointCut Activity="Directory_User_NewInternal:Request"
-            ActivityState="ActionWithRefine-Executed" Mode="Before" />
-        <PointCut Activity="Directory_User_NewInternal:Review"
-            ActivityState="ReviewWithFeedback-Approved" Mode="Before" />
-    </AssertValueAspect>
+<AssertValueAspect Identifier="User_NewInternal_CheckDates" 
+    Binding="Workflow_User:User.Records.ContractEndDate" 
+    ExpressionBinding="Workflow_User:User.Records"
+    Expression="C#:record: return 
+        (((Nullable<DateTime>) record.ContractStartDate).HasValue &&
+         ((Nullable<DateTime>) record.ContractEndDate).HasValue) ?
+        record.ContractStartDate < record.ContractEndDate : true;"
+    Message_L1="Contract's end date must be after contract's start date.">
+    <PointCut Activity="User_NewInternal:Request"
+        ActivityState="ActionWithRefine-Executed" Mode="Before" />
+    <PointCut Activity="User_NewInternal:Review"
+        ActivityState="ReviewWithFeedback-Approved" Mode="Before" />
+</AssertValueAspect>
 \end{lstlisting}
 
 When the XML files are ready to be tested, a command start the process of compilation where the configuration are going to be analysed and verified against the XSD file containg all the restrictions of the XML files and error messages that are shown in the console if any mistake was made.
@@ -159,7 +149,7 @@ After the verification of the files is done, the application is going to import 
   \label{fig:configurationCycle}
 \end{figure}
 
-\subsection{XML Configuration and Object-Oriented Programming (OOP)}
+\subsection{XML Configuration and Object-Oriented Programming}
 
 The structural and functional paradigms of XML schema configurations in Usercube share similarities to the principles of Object-Oriented Programming (OOP). In the XML configuration, elements encapsulate specific configuration details, similar to how classes in OOP encapsulate data and methods. This encapsulation allows each XML tag to define distinct aspects of the configuration, mirroring the way class definitions manage properties and behaviors.
 
